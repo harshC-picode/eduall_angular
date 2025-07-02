@@ -1,0 +1,390 @@
+
+
+<!-- ==================== Header Start Here ==================== -->
+<header class="header">
+    <div class="container container--xl">
+        <nav class="header-inner flex-between gap-8">
+
+            <div class="header-content-wrapper flex-align flex-grow-1">
+                <!-- Logo Start -->
+                <div class="logo">
+                    <a [routerLink]="['index']" class="link">
+                        <!-- <img src="assets/images/logo/logo.png" alt="Logo"> -->
+                        <img src="../../../assets/images/logo/logo.png" alt="Logo">
+
+                    </a>
+                </div>
+                <!-- Logo End  -->
+
+                <!-- Select Start -->
+                <!-- Wrap everything in a container to track outside clicks -->
+                <div class="position-relative" style="cursor: pointer;">
+
+                    <!-- Trigger: Only this toggles the dropdown -->
+                    <div class="dropdown-toggle-pill fw-medium text-secondary d-flex align-items-center gap-2 px-3 py-3 rounded-pill"
+                        (click)="toggleDropdown()" style="min-width: 100px; font-size: 1rem;">
+
+                        <i class="ph-bold ph-squares-four"></i>
+
+                        <!-- Category text with arrow beside it -->
+                        <span class="d-flex align-items-center gap-1">
+                            {{ selectedCategory || 'Categories' }}
+                            <span>
+                                {{ dropdownOpen ? '' : '' }}
+                            </span>
+                        </span>
+                    </div>
+
+
+                    <!-- Dropdown Menu: Clicking inside this WON'T toggle -->
+                    <div class="custom-dropdown mt-2" *ngIf="dropdownOpen">
+                        <input type="text" placeholder="Search" [(ngModel)]="searchTerm" class="form-control mb-2" />
+
+                        <div class="dropdown-list">
+                            <div *ngFor="let category of filteredCategories()" class="dropdown-item"
+                                [class.active]="category === selectedCategory" (click)="selectCategory(category)">
+                                {{ category }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Select End -->
+
+                <!-- Menu Start  -->
+                <div class="header-menu d-lg-block d-none">
+
+                    <ul class="nav-menu flex-align ">
+                        <li class="nav-menu__item has-submenu activePage">
+                            <a href="javascript:void(0)" class="nav-menu__link">Home</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item activePage">
+                                    <a [routerLink]="['index']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        LMS</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['index-2']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        Online Course</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['index-3']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        University</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['index-4']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        Tutor</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['index-5']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        Kindergarten</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['index-6']" class="nav-submenu__link hover-bg-neutral-30"> Home
+                                        Kindergarten two</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item has-submenu">
+                            <a href="javascript:void(0)" class="nav-menu__link">Courses</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['course']" class="nav-submenu__link hover-bg-neutral-30"> Course
+                                        Grid View</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['course-list-view']"
+                                        class="nav-submenu__link hover-bg-neutral-30"> Course List View</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['course-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Course Details</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['lesson-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Lesson Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item has-submenu">
+                            <a href="javascript:void(0)" class="nav-menu__link">Pages</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['about']" class="nav-submenu__link hover-bg-neutral-30"> About</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['about-two']" class="nav-submenu__link hover-bg-neutral-30"> About
+                                        Two</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['about-three']" class="nav-submenu__link hover-bg-neutral-30">
+                                        About Three</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['about-four']" class="nav-submenu__link hover-bg-neutral-30">
+                                        About Four</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['pricing-plan']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Pricing Plan</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Instructor</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-two']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Instructor Two</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-details']"
+                                        class="nav-submenu__link hover-bg-neutral-30"> Instructor Details</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['tutor']" class="nav-submenu__link hover-bg-neutral-30"> Premium
+                                        Tutors</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['tutor-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Premium Tutors Details</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['faq']" class="nav-submenu__link hover-bg-neutral-30">FAQ</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['tuition-jobs']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Tuition Jobs</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['events']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Events</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['events-details']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Event Details</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['apply-admission']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Apply Admission</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['gallery']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Gallery</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['privacy-policy']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Privacy Policy</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['favorite-course']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Favorite Course</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['find-tutors']" class="nav-submenu__link hover-bg-neutral-30">Find
+                                        Best Tutors</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['book-online-class']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Book Online Class</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item has-submenu">
+                            <a href="javascript:void(0)" class="nav-menu__link">Dashboard</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['admin-dashbord']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Admin Dashbord</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['my-profile']" class="nav-submenu__link hover-bg-neutral-30">My
+                                        Profile</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['dashbord-message']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Message</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['dashbord-courses']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Courses</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['dashbord-wishlist']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Wishlist</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['deshbord-reviews']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Reviews</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['dashbord-quiz-attempts']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Quiz Attempts</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['dashbord-settings']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Settings</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Admin Dashbord</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-my-profile']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student My Profile</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-message']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Message</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-enrolled-courses']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Enrolled Courses</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-wishlist']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Wishlist</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-reviews']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Reviews</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-my-quiz-attempts']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student My Quiz Attempts</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-assignment']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Assignment</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['student-dashbord-settings']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Student Settings</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Dashbord</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-my-profile']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor My Profile</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-message']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Message</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-enrolled-courses']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Enrolled Courses</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-wishlist']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Wishlist</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-reviews']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Reviews</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-my-quiz-attempts']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor My Quiz Attempts</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-order-history']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Order History</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-my-courses']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor My Courses</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-announcements']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Announcements</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-assignment']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Assignment</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-quiz-attempts']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Quiz Attempts</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['instructor-dashboard-account-settings']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Instructor Account Settings</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item has-submenu">
+                            <a href="javascript:void(0)" class="nav-menu__link">Product</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['product']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Product</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['product-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Product Details</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['cart']" class="nav-submenu__link hover-bg-neutral-30">Cart</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['checkout']"
+                                        class="nav-submenu__link hover-bg-neutral-30">Checkout</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item has-submenu">
+                            <a href="javascript:void(0)" class="nav-menu__link">Blog</a>
+                            <ul class="nav-submenu scroll-sm">
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['blog']" class="nav-submenu__link hover-bg-neutral-30"> Blog
+                                        Grid</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['blog-list']" class="nav-submenu__link hover-bg-neutral-30"> Blog
+                                        List</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['blog-classic']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Blog Classic</a>
+                                </li>
+                                <li class="nav-submenu__item">
+                                    <a [routerLink]="['blog-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Blog Details</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-menu__item">
+                            <a [routerLink]="['contact']" class="nav-menu__link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Menu End  -->
+            </div>
+
+            <!-- Header Right start -->
+            <div class="header-right flex-align">
+                <!-- search-form.component.html -->
+                <form (ngSubmit)="onSearch()" class="search-form position-relative d-xl-block d-none">
+                    <input type="text" class="common-input rounded-pill bg-main-25 pe-48 border-neutral-30"
+                        placeholder="Search..." [(ngModel)]="searchText" name="search" />
+                    <button type="submit"
+                        class="w-36 h-36 bg-main-600 hover-bg-main-700 rounded-circle flex-center text-md text-white position-absolute top-50 translate-middle-y inset-inline-end-0 me-8">
+                        <i class="ph-bold ph-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <a [routerLink]="['sign-in']"
+                    class="info-action w-52 h-52 bg-main-25 hover-bg-main-600 border border-neutral-30 rounded-circle flex-center text-2xl text-neutral-500 hover-text-white hover-border-main-600">
+                    <i class="ph ph-user-circle"></i>
+                </a>
+                <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+            <!-- Header Right End  -->
+        </nav>
+    </div>
+</header>
+<!-- ==================== Header End Here ==================== -->
