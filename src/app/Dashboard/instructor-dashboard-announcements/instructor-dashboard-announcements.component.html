@@ -1,295 +1,245 @@
-                <!-- ============Feedbacks start============ -->
-                <div class="w-100">
-                
-                    <div class="px-24 py-24 bg-white rounded-10">
-                            <div class="d-flex align-items-center gap-8 justify-content-between">
-                                <h6 class="mb-0 fw-medium">Announcements</h6>
-                                <button type="button" class="toggle-student-dashbord-button text-neutral-900 text-24 d-xl-none d-block">
-                                    <i class="ph-bold ph-list"></i>
-                                </button>
-                            </div>
-                        <div class="mb-24">
-                            
-                            <div class="">
-                                <table id="example-five" class="display min-w-max w-100 overflow-x-auto">
-                                    <thead>
-                                        <tr class="bg-main-25">
-                                            <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Announcements</th>
-                                            <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Course Name</th>
-                                            <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Date</th>
-                                            <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Time</th>
-                                            <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Spring Concert Tickets On Sale Starting Today</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Swift Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">02:30 pm</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+<section class="bg-main-25 explore-course position-relative z-1 pb-80 w-100 h-100">
+    <div class="container container--lg">
+        <div class="d-flex gap-24 mt--120 z-2 position-relative">
+            <div class="student-overlay-sidebar"></div>
 
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Make Up Test for Those Absent Last Week</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Objective C Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">05:51 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+            <!-- ========Dashdord Sidebar start======== -->
+            <div
+                class="student-dashboard-sidebar px-20 py-24 max-w-288-px bg-white rounded-10 w-100 h-100 position-relative">
+                <div class="text-center">
+                    <img src="assets/images/thumbs/instructor-dashboard-img1.png" alt="" class="mb-20">
+                    <h5 class="mb-4 text-neutral-500">Cameron Williamson</h5>
+                    <span class="text-neutral-500 text-14 fw-normal mb-12">info&#64;example.com</span>
+                    <ul class="d-flex align-items-center gap-4 justify-content-center text-center mb-4">
+                        <li class="text-16 text-warning-500"><i class="ph-fill ph-star"></i></li>
+                        <li class="text-16 text-warning-500"><i class="ph-fill ph-star"></i></li>
+                        <li class="text-16 text-warning-500"><i class="ph-fill ph-star"></i></li>
+                        <li class="text-16 text-warning-500"><i class="ph-fill ph-star"></i></li>
+                        <li class="text-16 text-warning-500"><i class="ph-fill ph-star-half"></i></li>
+                    </ul>
+                    <span class="text-14 fw-normal text-neutral-300">4.8/5 (1.5K Reviews)</span>
+                </div>
+                <span class="w-100 bg-main-100 mb-24 mt-24 h-1"></span>
+                <div class="overflow-x-auto">
+                    <div class="student-dashbord-scrollbar min-w-max pb-80">
+                        <span class="text-neutral-500 fw-normal text-14 mb-8">Welcome Williamson,</span>
+                        <ul>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph-bold ph-house"></i></span>
+                                    Dashboard</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-my-profile']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-user-circle"></i></span>
+                                    My Profile</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-message']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-chat-dots"></i></span>
+                                    Message</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-enrolled-courses']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-watch"></i></span>
+                                    Enrolled Courses</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-wishlist']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-bookmark-simple"></i></span>
+                                    Wishlist</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-reviews']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-sparkle"></i></span>
+                                    Reviews</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-my-quiz-attempts']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03">
+                                        <i class="ph ph-seal-question"></i>
+                                    </span>
+                                    My Quiz Attempts</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-order-history']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03">
+                                        <i class="ph ph-shopping-cart"></i>
+                                    </span>
+                                    Order History</a>
+                            </li>
 
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Bring Home Midterm Progress Reports Today</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">CSS3 Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">11:49 pm</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
+                            <li class="text-neutral-500 fw-normal text-14 mb-8 mt-8">Instructor</li>
 
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Submit Nominations for Student Council President</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Jango Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">07:40 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Remember to Submit Community Service Forms</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">React Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">01:55 pm</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Library Books Due One Week From Today</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">LaravelCourses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">04:15 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Graduation Ticket Sales Start Monday at 9AM</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">PHP</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">03:48 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Sign Up Now for After School Tutoring Sessions</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Angular Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">07:38 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Mandatory Textbook Pickup After School Wednesday</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Html</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">01:09 am</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Textbook Chapter to Read Before Next Class</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Python Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">06:32 pm</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Were You Absent Last Week? Makeup Work Available</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">Vuejs Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">12:23 pm</td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr class="hover-bg-neutral-20 transition-03">
-                                            <td class="py-28 px-20 shadow-none">
-                                                <span class="fw-normal text-14 text-neutral-500">Bus Route Change Effective Monday Morning</span>
-                                            </td>
-                                            <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">NodeJS Courses</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">January 20, 2025</td>
-                                            <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">01:08 pm </td>
-                                            <td class="py-28 px-20 shadow-none">
-                                                <div class="d-flex align-items-center gap-12">
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-pencil-simple-line"></i>
-                                                    </button>
-                                                    <button type="button" class="text-neutral-500 text-24 hover-text-main-600 transition-03">
-                                                        <i class="ph ph-trash"></i>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-        
-                        </div>
-            
-                        <div class="d-flex align-items-center gap-24 justify-content-between flex-wrap">
-                            <div class="form-check form-switch d-flex align-items-center gap-8">
-                                <input class="form-check-input focus-box-shadow w-60 h-32" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                                <label class="form-check-label text-14 fw-normal text-neutral-500" for="flexSwitchCheckDefault">Dense</label>
-                            </div>
-                            <div class="d-flex align-items-center gap-40 flex-wrap">
-            
-                                <div class="d-flex align-items-center gap-16">
-                                    <span class="fw-normal text-14 text-neutral-500">Rows per page:</span>
-                                    <select class="form-select w-auto pe-32 text-14 fw-normal text-neutral-500 bg-transparent border-0">
-                                        <option value="1">12</option>
-                                        <option value="1">13</option>
-                                        <option value="1">11</option>
-                                        <option value="1">15</option>
-                                    </select>
-                                </div>
-            
-                                <div class="d-flex align-items-center gap-16">
-                                    <span class="fw-normal text-14 text-neutral-500">1-12 of 100</span>
-                                    <div class="d-flex align-items-center gpa-8">
-                                        <span class="text-20 text-neutral-500">
-                                            <i class="ph-bold ph-caret-left"></i>
-                                        </span>
-                                        <span class="text-20 text-neutral-500">
-                                            <i class="ph-bold ph-caret-right"></i>
-                                        </span>
-                                    </div>
-                                </div>
-            
-                            </div>
-            
-                        </div>
-            
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-my-courses']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03">
+                                        <i class="ph ph-graduation-cap"></i>
+                                    </span>
+                                    My Courses</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-announcements']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span
+                                        class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
+                                        <i class="ph ph-megaphone"></i>
+                                    </span>
+                                    Announcements</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-assignment']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span
+                                        class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
+                                        <i class="ph ph-file-text"></i>
+                                    </span>
+                                    Assignments</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-quiz-attempts']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span
+                                        class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
+                                        <i class="ph ph-seal-question"></i>
+                                    </span>
+                                    Quiz Attempts</a>
+                            </li>
+                            <li class="mb-8">
+                                <a [routerLink]="['/instructor-dashboard-account-settings']"
+                                    class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
+                                    <span class="text-16 text-main-600 item-hover__text transition-03"><i
+                                            class="ph ph-gear"></i></span>
+                                    Account Settings</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-                <!-- ============Feedbacks end============ -->
+
+                <div class="position-absolute inset-block-end-0 inset-inline-start-0 pb-16 px-16 w-100">
+                    <a [routerLink]="['/sign-in']"
+                        class=" text-14 fw-medium text-neutral-500 d-flex align-items-center gap-8  hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap bg-white">
+                        <span class="text-16 text-main-600 item-hover__text transition-03">
+                            <i class="ph ph-sign-out"></i>
+                        </span>
+                        Logout
+                    </a>
+                </div>
+            </div>
+            <!-- ========Dashdord Sidebar end======== -->
+
+            <!-- ============Feedbacks start============ -->
+            <div class="w-100">
+
+                <div class="px-24 py-24 bg-white rounded-10">
+                    <div class="d-flex align-items-center gap-8 justify-content-between">
+                        <h6 class="mb-0 fw-medium">Announcements</h6>
+                        <button type="button"
+                            class="toggle-student-dashbord-button text-neutral-900 text-24 d-xl-none d-block">
+                            <i class="ph-bold ph-list"></i>
+                        </button>
+                    </div>
+                    <div class="mb-24">
+
+                        <div class="">
+                            <table id="example-five" class="display min-w-max w-100 overflow-x-auto">
+                                <thead>
+                                    <tr class="bg-main-25">
+                                        <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Announcements</th>
+                                        <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Course Name</th>
+                                        <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Date</th>
+                                        <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Time</th>
+                                        <th class="text-12 fw-medium text-neutral-500 py-16 px-20">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of tableData" class="hover-bg-neutral-20 transition-03">
+                                        <td class="py-28 px-20 shadow-none">
+                                            <span class="fw-normal text-14 text-neutral-500">{{ item.title }}</span>
+                                        </td>
+                                        <td class="text-14 fw-normal text-neutral-500 py-28 px-20 shadow-none">
+                                            {{ item.course }}
+                                        </td>
+                                        <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">
+                                            {{ item.date }}
+                                        </td>
+                                        <td class="py-28 px-20 shadow-none text-14 fw-normal text-neutral-500">
+                                            {{ item.time }}
+                                        </td>
+                                        <td class="py-28 px-20 shadow-none">
+                                            <div class="d-flex align-items-center gap-12">
+                                                <button type="button"
+                                                    class="text-neutral-500 text-24 hover-text-main-600 transition-03">
+                                                    <i class="ph ph-pencil-simple-line"></i>
+                                                </button>
+                                                <button type="button"
+                                                    class="text-neutral-500 text-24 hover-text-main-600 transition-03">
+                                                    <i class="ph ph-trash"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            </table>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center gap-24 justify-content-between flex-wrap">
+                        <div class="form-check form-switch d-flex align-items-center gap-8">
+                            <input class="form-check-input focus-box-shadow w-60 h-32" type="checkbox" role="switch"
+                                id="flexSwitchCheckDefault">
+                            <label class="form-check-label text-14 fw-normal text-neutral-500"
+                                for="flexSwitchCheckDefault">Dense</label>
+                        </div>
+                        <div class="d-flex align-items-center gap-40 flex-wrap">
+
+                            <div class="d-flex align-items-center gap-16">
+                                <span class="fw-normal text-14 text-neutral-500">Rows per page:</span>
+                                <select
+                                    class="form-select w-auto pe-32 text-14 fw-normal text-neutral-500 bg-transparent border-0">
+                                    <option value="1">12</option>
+                                    <option value="1">13</option>
+                                    <option value="1">11</option>
+                                    <option value="1">15</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex align-items-center gap-16">
+                                <span class="fw-normal text-14 text-neutral-500">1-12 of 100</span>
+                                <div class="d-flex align-items-center gpa-8">
+                                    <span class="text-20 text-neutral-500">
+                                        <i class="ph-bold ph-caret-left"></i>
+                                    </span>
+                                    <span class="text-20 text-neutral-500">
+                                        <i class="ph-bold ph-caret-right"></i>
+                                    </span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- ============Feedbacks end============ -->
+        </div>
+    </div>
+</section>

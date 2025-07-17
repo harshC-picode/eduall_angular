@@ -1,40 +1,6 @@
     <!-- ==================== Breadcrumb Start Here ==================== -->
-<section class="breadcrumb py-120 bg-main-25 position-relative z-1 overflow-hidden mb-0">
-    <img src="assets/images/shapes/shape1.png" alt="" class="shape one animation-rotation d-md-block d-none">
-    <img src="assets/images/shapes/shape2.png" alt="" class="shape two animation-scalation d-md-block d-none">
-    <img src="assets/images/shapes/shape3.png" alt="" class="shape eight animation-walking d-md-block d-none">
-    <img src="assets/images/shapes/shape5.png" alt="" class="shape six animation-walking d-md-block d-none">
-    <img src="assets/images/shapes/shape4.png" alt="" class="shape four animation-scalation">
-    <img src="assets/images/shapes/shape4.png" alt="" class="shape nine animation-scalation">
-    
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="breadcrumb__wrapper">
-                    <h1 class="breadcrumb__title display-4 fw-semibold text-center"> FAQ</h1>
-                    <ul class="breadcrumb__list d-flex align-items-center justify-content-center gap-4">
-                        <li class="breadcrumb__item">
-                            <a [routerLink]="['index']"  class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> 
-                                <i class="text-lg d-inline-flex ph-bold ph-house"></i> Home</a>
-                         </li>
-                        <li class="breadcrumb__item">
-                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
-                        </li>
-                        <li class="breadcrumb__item">
-                            <a [routerLink]="['course']"  class="breadcrumb__link text-neutral-500 hover-text-main-600 fw-medium"> </a> 
-                        </li>
-                        <li class="breadcrumb__item d-none">
-                            <i class="text-neutral-500 d-flex ph-bold ph-caret-right"></i>
-                        </li>
-                        <li class="breadcrumb__item"> 
-                            <span class="text-main-two-600"> FAQ </span> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<app-breadcrumb [title]="'FAQ'"></app-breadcrumb>
+
 <!-- ==================== Breadcrumb End Here ==================== -->
 
     <!-- =============================== FAQ Page Section Start ================================== -->
@@ -582,41 +548,19 @@
 <!-- ===================================== Testimonials Section Three End ================================= -->
     
     <!-- ========================== Brand Section Start =========================== -->
- <div class="brand wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".5s">
+<div class="brand wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".5s">
     <div class="container container--lg">
-        <div class="brand-box py-80 px-16 ">
+        <div class="brand-box py-80 px-16 bg-main-25 border border-neutral-30 rounded-16">
             <h5 class="mb-40 text-center text-neutral-500">TRUSTED BY OVER 17,300 GREAT TEAMS</h5>
-            <div class="container">
-                <div class="brand-slider">
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img1.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img2.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img3.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img4.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img5.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img6.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img7.png" alt="">
-                    </div>
-                    <div class="brand-slider__item px-24">
-                        <img src="assets/images/thumbs/brand-img3.png" alt="">
-                    </div>
+            <ngx-slick-carousel class="brand-slider" [config]="brandConfig">
+                <div ngxSlickItem *ngFor="let brand of brandImages" class="brand-slider__item px-20">
+                    <img [src]="brand" alt="Brand Image" />
                 </div>
-            </div>
+            </ngx-slick-carousel>
+
         </div>
     </div>
- </div>
+</div>
 <!-- ========================== Brand Section End =========================== -->
 
     <!-- ================================= Certificate Section Start ================================= -->

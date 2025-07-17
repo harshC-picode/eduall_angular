@@ -1,12 +1,14 @@
-<app-header2></app-header2>
+<div class="dashboard-layout">
 
-<div class="main-container">
-  <app-sidebar></app-sidebar>
 
-  <div class="content-area">
-    <main class="page-content">
-      <router-outlet></router-outlet>
-    </main>
-    <app-footer2></app-footer2>
+  <div class="main-wrapper">
+    <app-header2></app-header2>
+
+    <div class="main-content-wrapper">
+      <main class="main-content">
+        <router-outlet></router-outlet>
+      </main>
+      <app-footer2></app-footer2>
+    </div>
   </div>
 </div>

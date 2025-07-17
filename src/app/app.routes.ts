@@ -74,13 +74,19 @@ import { InstructorDashboardAnnouncementsComponent } from './Dashboard/instructo
 import { InstructorDashboardAssignmentComponent } from './Dashboard/instructor-dashboard-assignment/instructor-dashboard-assignment.component';
 import { InstructorDashboardQuizAttemptsComponent } from './Dashboard/instructor-dashboard-quiz-attempts/instructor-dashboard-quiz-attempts.component';
 import { InstructorDashboardAccountSettingsComponent } from './Dashboard/instructor-dashboard-account-settings/instructor-dashboard-account-settings.component';
-
+import { NgModule } from '@angular/core';
+import { RouterModule, ExtraOptions } from '@angular/router';
 
 export const routes: Routes = [
   {
     path: '',
     component: LayoutallComponent,
     children: [
+      {
+        path: '',
+        component: IndexComponent,
+        title: 'index'
+      },
 
       {
         path: 'about',
@@ -426,6 +432,11 @@ export const routes: Routes = [
         title: 'instructor-dashboard-my-quiz-attempts'
       },
       {
+        path: 'instructor-dashboard-order-history',
+        component: InstructorDashboardOrderHistoryComponent,
+        title: 'instructor-dashboard-order-history'
+      },
+      {
         path: 'instructor-dashboard-my-courses',
         component: InstructorDashboardMyCoursesComponent,
         title: 'instructor-dashboard-my-courses'
@@ -453,3 +464,10 @@ export const routes: Routes = [
     ]
   }
 ];
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled', // <-- Scrolls to top on navigation
+  anchorScrolling: 'enabled',           // <-- Optional: Enables fragment/anchor scrolling
+  scrollOffset: [0, 0],                 // Optional: Customize offset
+};
+

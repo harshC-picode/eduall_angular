@@ -11,26 +11,27 @@
                 <!-- Logo End  -->
     
                 <!-- Select Start -->
-                <div class="d-sm-block d-none">
-                    <div class="student-dashboard-select border-neutral-600 border rounded-pill position-relative">
-    <span class="select-icon position-absolute top-50 d-xxl-block d-none translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
-        <i class="ph-bold ph-squares-four"></i>
-    </span>
-    <select class="js-example-basic-single student-dashboard-select" name="state">
-        <option value="1" selected disabled>Categories</option>
-        <option value="1">Design</option>
-        <option value="1">Development</option>
-        <option value="1">Architecture</option>
-        <option value="1">Life Style</option> 
-        <option value="1">Data Science</option>
-        <option value="1">Marketing</option>
-        <option value="1">Music</option>
-        <option value="1">Typography</option>
-        <option value="1">Finance</option>
-        <option value="1">Motivation</option>
-    </select>
+               <div class="category-dropdown position-relative d-inline-block">
+  <button class="dropdown-toggle-btn d-flex align-items-center rounded-pill border bg-light px-15 py-9" (click)="toggleDropdown()">
+    <i class="ph-bold ph-squares-four me-2"></i>
+    Categories
+    <i class="ph ph-caret-down ms-2"></i>
+  </button>
+
+  <div class="dropdown-menu-custom mt-2" *ngIf="dropdownOpen">
+    <div class="dropdown-title px-8 pt-8 pb-1 text-muted fw-bold">Categories</div>
+    <ul class="list-unstyled mb-0 px-10 py-6 overflow-auto max-height-150">
+      <li
+        *ngFor="let cat of categories"
+        class="dropdown-item-custom px-6 py-6 rounded"
+        [class.active]="cat === selectedCategory"
+        (click)="selectCategory(cat)"
+      >
+        {{ cat }}
+      </li>
+    </ul>
+  </div>
 </div>
-                </div>
                 <!-- Select End -->
     
                 <!-- Menu Start  -->
@@ -347,19 +348,19 @@
                     </button>
                     <ul class="dropdown-menu rounded-12">
                         <li>
-                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="my-profile.html">
+                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="my-profile">
                             <span><i class="ph ph-user-circle"></i></span>
                             <span>My Profile</span>
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="dashbord-settings.html">
+                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="dashbord-settings">
                             <span><i class="ph ph-gear"></i></span>
                             <span>Settings</span>
                             </a>
                         </li>
                         <li>
-                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="sign-in.html">
+                            <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="sign-in">
                             <span><i class="ph ph-power"></i></span>
                             <span>Log Out</span>
                             </a>

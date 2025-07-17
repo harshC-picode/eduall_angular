@@ -1,0 +1,94 @@
+.custom-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #0056d2; // or your brand color
+    color: #fff;
+    border-color: #0056d2;
+  }
+}
+
+.review-section {
+  padding: 80px 0;
+  background: #f9fbfd;
+
+  .testimonial-box {
+    background: #fff;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  }
+
+  .testimonial-card {
+    background: #ecf5ff;
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #0056d2;
+      color: #fff;
+
+      .text-muted,
+      .testimonial-text {
+        color: #fff !important;
+      }
+    }
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+  }
+
+  .stars {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin: 16px 0;
+  }
+
+  .testimonial-text {
+    font-size: 15px;
+    color: #555;
+  }
+
+  
+    .slick-arrow {
+      background: #0056d2;
+      color: #fff;
+      border-radius: 50%;
+      border: none;
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      position: absolute;
+      bottom: -50px;
+      z-index: 5;
+
+      &.slick-prev {
+        left: 45%;
+      }
+
+      &.slick-next {
+        right: 45%;
+      }
+    }
+}
+

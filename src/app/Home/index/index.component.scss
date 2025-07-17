@@ -1,0 +1,84 @@
+.brand-slider {
+  .brand-slider__item {
+    img {
+      max-height: 25px;
+      
+      display: block;
+      margin: auto;
+    }
+  }
+
+  .slick-slide {
+    text-align: center;
+  }
+}
+
+.features-slider-wrapper {
+  position: relative;
+
+  .features-slider {
+    margin-bottom: 24px;
+  }
+
+  .slider-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .btn-arrow {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+    font-size: 18px;
+    transition: 0.3s;
+
+    &:hover {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  }
+
+  // Optional: override default slick button styling just in case
+  .slick-prev,
+  .slick-next {
+    position: static !important;
+    transform: none !important;
+    margin: 0 8px;
+  }
+}
+
+/* Buttons should be circular and centered */
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+
+  button {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    font-size: 18px;
+    transition: 0.3s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+  }
+}
+

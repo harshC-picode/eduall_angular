@@ -1,3 +1,8 @@
+<!-- 
+  <div class="preloader">
+    <img src="assets/images/icons/preloader.gif" alt="">
+  </div> -->
+
 
 
 <!-- ==================== Header Start Here ==================== -->
@@ -17,38 +22,12 @@
                 <!-- Logo End  -->
 
                 <!-- Select Start -->
-                <!-- Wrap everything in a container to track outside clicks -->
-                <div class="position-relative" style="cursor: pointer;">
+                <!-- Category Dropdown Start -->
+                <app-category-dropdown></app-category-dropdown>
 
-                    <!-- Trigger: Only this toggles the dropdown -->
-                    <div class="dropdown-toggle-pill fw-medium text-secondary d-flex align-items-center gap-2 px-3 py-3 rounded-pill"
-                        (click)="toggleDropdown()" style="min-width: 100px; font-size: 1rem;">
-
-                        <i class="ph-bold ph-squares-four"></i>
-
-                        <!-- Category text with arrow beside it -->
-                        <span class="d-flex align-items-center gap-1">
-                            {{ selectedCategory || 'Categories' }}
-                            <span>
-                                {{ dropdownOpen ? '' : '' }}
-                            </span>
-                        </span>
-                    </div>
+                <!-- Category Dropdown End -->
 
 
-                    <!-- Dropdown Menu: Clicking inside this WON'T toggle -->
-                    <div class="custom-dropdown mt-2" *ngIf="dropdownOpen">
-                        <input type="text" placeholder="Search" [(ngModel)]="searchTerm" class="form-control mb-2" />
-
-                        <div class="dropdown-list">
-                            <div *ngFor="let category of filteredCategories()" class="dropdown-item"
-                                [class.active]="category === selectedCategory" (click)="selectCategory(category)">
-                                {{ category }}
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
 
                 <!-- Select End -->
 
