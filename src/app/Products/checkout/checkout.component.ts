@@ -4,7 +4,7 @@ import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.componen
 
 @Component({
   selector: 'app-checkout',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [BreadcrumbComponent],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'
 })

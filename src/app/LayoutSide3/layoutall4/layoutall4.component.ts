@@ -6,7 +6,7 @@ import { Sidebar3Component } from '../sidebar3/sidebar3.component';
 
 @Component({
   selector: 'app-layoutall4',
-  imports: [RouterOutlet,Header4Component,Footer4Component,Sidebar3Component],
+  imports: [RouterOutlet,Header4Component,Footer4Component],
   templateUrl: './layoutall4.component.html',
   styleUrl: './layoutall4.component.scss'
 })

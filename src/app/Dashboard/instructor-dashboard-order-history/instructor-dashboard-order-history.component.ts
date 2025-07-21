@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/instructor-sidebar.component';
 
 @Component({
   selector: 'app-instructor-dashboard-order-history',
-  imports: [RouterLink,CommonModule],
+  imports: [CommonModule,InstructorSidebarComponent],
   templateUrl: './instructor-dashboard-order-history.component.html',
   styleUrl: './instructor-dashboard-order-history.component.scss'
 })

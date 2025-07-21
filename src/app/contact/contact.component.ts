@@ -4,7 +4,7 @@ import { BreadcrumbComponent } from '../shared/breadcrumb/breadcrumb.component';
 
 @Component({
   selector: 'app-contact',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [BreadcrumbComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgIf, NgFor, NgClass } from '@angular/common'; // ✅ Import NgClass here
 import { CategoryDropdownComponent } from '../../shared/category-dropdown/category-dropdown.component';
@@ -10,7 +10,7 @@ declare var $: any;
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, FormsModule, NgIf, NgFor, NgClass,CategoryDropdownComponent], // ✅ Include NgClass here
+  imports: [RouterLink, FormsModule,CategoryDropdownComponent,RouterLinkActive], // ✅ Include NgClass here
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

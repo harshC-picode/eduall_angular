@@ -3,89 +3,7 @@
 
 
         <!-- ========Dashdord Sidebar start======== -->
-        <div
-            class="dashboard-sidebar px-20 py-24 max-w-288-px bg-white w-100 border-end border-neutral-40 position-relative">
-            <a href="#">
-                <img src="assets/images/logo/logo.png" alt="" class="">
-            </a>
-            <span class="w-100 bg-neutral-40 mb-24 mt-24 h-1"></span>
-            <div class="overflow-x-auto">
-                <div class="scrollbar min-w-max">
-                    <span class="text-neutral-500 fw-normal text-14 mb-8">Welcome Henry,</span>
-                    <ul>
-                        <li class="mb-8">
-                            <a href="admin-dashbord"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph-bold ph-house"></i></span>
-                                Dashboard</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="my-profile"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-user-circle"></i></span>
-                                My Profile</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="dashbord-message"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-chat-dots"></i></span>
-                                Message</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="dashbord-courses"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-watch"></i></span>
-                                Courses</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="dashbord-wishlist"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-bookmark-simple"></i></span>
-                                Wishlist</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="deshbord-reviews"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-sparkle"></i></span>
-                                Reviews</a>
-                        </li>
-                        <li class="mb-8">
-                            <a href="dashbord-quiz-attempts"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-seal-question"></i></span>
-                                Quiz Attempts</a>
-                        </li>
-                        <li class="mb-8">
-                            <span class="fw-normal text-14 text-neutral-500">Admin</span>
-                        </li>
-                        <li class="mb-8">
-                            <a href="dashbord-settings"
-                                class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                                <span class="text-16 text-main-600 item-hover__text transition-03"><i
-                                        class="ph ph-gear"></i></span>
-                                Settings</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="position-absolute inset-block-end-0 inset-inline-start-0 pb-16 px-16 w-100">
-                <a href="sign-in"
-                    class=" text-14 fw-medium text-neutral-500 d-flex align-items-center gap-8  hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap bg-white">
-                    <span class="text-16 text-main-600 item-hover__text transition-03">
-                        <i class="ph ph-sign-out"></i>
-                    </span>
-                    Logout
-                </a>
-            </div>
-        </div>
+        <app-dashboard-sidebar></app-dashboard-sidebar>
         <!-- ========Dashdord Sidebar end======== -->
 
 
@@ -111,7 +29,7 @@
                     </div>
 
                     <div class="d-flex align-items-center gap-16">
-                        <a href="#"
+                        <a [routerLink]="['/#']"
                             class="px-20 py-10 border-main-600 border rounded-pill text-14 text-main-600 hover-bg-main-600 hover-text-white hover-border-600 d-lg-block d-none line-height-1">Create
                             a New Course</a>
                         <div
@@ -257,7 +175,7 @@
                                     <img src="assets/images/icons/dashbord-item1.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -275,7 +193,7 @@
                                     <img src="assets/images/icons/dashbord-item2.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -293,7 +211,7 @@
                                     <img src="assets/images/icons/dashbord-item3.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -311,7 +229,7 @@
                                     <img src="assets/images/icons/dashbord-item4.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -329,7 +247,7 @@
                                     <img src="assets/images/icons/dashbord-item5.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -347,7 +265,7 @@
                                     <img src="assets/images/icons/dashbord-item6.png" alt="">
                                 </span>
                             </div>
-                            <a href="#"
+                            <a [routerLink]="['/#']"
                                 class="text-12 fw-medium text-main-600 text-decoration-underline transition-03">View
                                 all</a>
                         </div>
@@ -369,9 +287,11 @@
                                 </div>
                             </div>
                             <span class="mt-20 mb-20 border-bottom-solid d-inline-block w-100"></span>
-                            <div id="react-chart">
+                            <app-line-chart></app-line-chart>
+                            <!-- <div id="react-chart">
 
-                            </div>
+                            </div> -->
+                            <!-- <app-charts></app-charts> -->
                             <div class="d-flex justify-content-center text-center">
                                 <ul class="d-flex align-items-center gap-24">
                                     <li class="text-14 fw-normal d-flex align-items-center gap-8 text-neutral-500">
@@ -403,8 +323,7 @@
                                 </div>
                             </div>
                             <span class="mt-20 mb-20 border-bottom-solid d-inline-block w-100"></span>
-                            <div id="donutChart">
-                            </div>
+                            <app-donut-chart></app-donut-chart>
                             <span class="mt-20 mb-20 border-bottom-solid d-inline-block w-100"></span>
                             <div class="d-flex align-items-center flex-wrap gap-20">
                                 <ul>
@@ -454,7 +373,7 @@
                         <div class="px-24 py-24 bg-white rounded-10">
                             <div class="d-flex align-items-center justify-content-between mb-24">
                                 <h6 class="mb-0 fw-medium text-16 text-neutral-500">Popular Instructor</h6>
-                                <a href="#"
+                                <a [routerLink]="['/#']"
                                     class="text-12 fw-medium text-main-600 fw-medium hover-underline transition-03">View
                                     all</a>
                             </div>
@@ -511,7 +430,8 @@
                         <div class="px-24 py-24 bg-white rounded-10">
                             <div class="d-flex align-items-center justify-content-between mb-24">
                                 <h6 class="mb-0 fw-medium text-16 text-neutral-500">Recent Course</h6>
-                                <a href="#" class="text-12 fw-medium text-main-600 hover-underline transition-03">View
+                                <a [routerLink]="['/#']"
+                                    class="text-12 fw-medium text-main-600 hover-underline transition-03">View
                                     all</a>
                             </div>
                             <div>
@@ -532,7 +452,7 @@
                                                 class="hover-bg-neutral-20 border-bottom transition-03">
                                                 <td class="py-22 line-height-1 px-20 shadow-none">
                                                     <div class="d-flex align-items-center gap-12">
-                                                        <a href="javascript:void(0)">
+                                                        <a [routerLink]="['/javascript:void(0)']">
                                                             <img [src]="course.image" [alt]="course.title"
                                                                 class="w-48 h-32" />
                                                         </a>
@@ -565,7 +485,8 @@
                         <div class="px-24 py-24 bg-white rounded-10">
                             <div class="d-flex align-items-center justify-content-between mb-24">
                                 <h6 class="mb-0 fw-medium text-16 text-neutral-500">Notifications</h6>
-                                <a href="#" class="text-12 fw-medium text-main-600 hover-underline transition-03">View
+                                <a [routerLink]="['/#']"
+                                    class="text-12 fw-medium text-main-600 hover-underline transition-03">View
                                     all</a>
                             </div>
 
@@ -583,7 +504,7 @@
                                                 class="hover-bg-neutral-20 border-bottom transition-03">
                                                 <td class="py-20 px-20 shadow-none line-height-1">
                                                     <div class="d-flex align-items-center gap-12">
-                                                        <a href="javascript:void(0)" class="flex-shrink-0">
+                                                        <a [routerLink]="['/javascript:void(0)']" class="flex-shrink-0">
                                                             <img [src]="notification.image" alt="" class="w-32 h-32" />
                                                         </a>
                                                         <div>
@@ -608,7 +529,8 @@
                         <div class="px-24 py-24 bg-white rounded-10">
                             <div class="d-flex align-items-center justify-content-between mb-24">
                                 <h6 class="mb-0 fw-medium text-16 text-neutral-500">Notice Board</h6>
-                                <a href="#" class="text-12 fw-medium text-main-600 hover-underline transition-03">View
+                                <a [routerLink]="['/#']"
+                                    class="text-12 fw-medium text-main-600 hover-underline transition-03">View
                                     all</a>
                             </div>
 
@@ -626,7 +548,7 @@
                                                 class="hover-bg-neutral-20 border-bottom transition-03">
                                                 <td class="py-20 px-20 shadow-none line-height-1">
                                                     <div class="d-flex align-items-center gap-12">
-                                                        <a href="javascript:void(0)" class="flex-shrink-0">
+                                                        <a [routerLink]="['/javascript:void(0)']" class="flex-shrink-0">
                                                             <img [src]="notice.image" alt="" class="w-32 h-32" />
                                                         </a>
                                                         <div>
@@ -651,7 +573,8 @@
                         <div class="px-24 py-24 bg-white rounded-10">
                             <div class="d-flex align-items-center justify-content-between mb-24">
                                 <h6 class="mb-0 fw-medium text-16 text-neutral-500">Total Feedbacks</h6>
-                                <a href="#" class="text-12 fw-medium text-main-600 hover-underline transition-03">View
+                                <a [routerLink]="['/#']"
+                                    class="text-12 fw-medium text-main-600 hover-underline transition-03">View
                                     all</a>
                             </div>
                             <div class="mb-24">
@@ -755,12 +678,14 @@
                 <div class="d-flex align-items-center gap-24 justify-content-between flex-wrap">
                     <p class="fw-medium text-14 text-neutral-500">
                         Copyright ©2025
-                        <a href="admin-dashbord" class="text-main-600 fw-medium">EduAll</a>.
+                        <a [routerLink]="['/admin-dashbord']" class="text-main-600 fw-medium">EduAll</a>.
                         All Rights Reserved
                     </p>
                     <div class="d-flex align-items-center gap-24">
-                        <a href="#" class="fw-medium text-14 text-neutral-500 hover-text-main-600">Privacy policy</a>
-                        <a href="#" class="fw-medium text-14 text-neutral-500 hover-text-main-600">Privacy policy</a>
+                        <a [routerLink]="['/#']" class="fw-medium text-14 text-neutral-500 hover-text-main-600">Privacy
+                            policy</a>
+                        <a [routerLink]="['/#']" class="fw-medium text-14 text-neutral-500 hover-text-main-600">Privacy
+                            policy</a>
                     </div>
                 </div>
             </div>

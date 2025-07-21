@@ -112,6 +112,102 @@ export class Index2Component {
 };
 
 
+  courses = [
+    {
+      image: 'assets/images/thumbs/course-img1.png',
+      userImage: 'assets/images/thumbs/user-two-img1.png',
+      categories: [
+        {
+          name: 'Marketing',
+          class: 'text-main-600 bg-main-25 hover-bg-main-600 hover-text-white'
+        },
+        {
+          name: 'Beginner',
+          class: 'text-main-three-600 bg-main-three-25 hover-bg-main-three-600 hover-text-white'
+        }
+      ],
+      title: 'Introduction to Digital Marketing',
+      lessons: 20,
+      duration: '9h 36m',
+      students: '1.5K',
+      price: '$148',
+      rating: 4,
+      ratingCount: '6.4k',
+      aos: { animation: 'fade-up', duration: 200 }
+    },
+    {
+      image: 'assets/images/thumbs/course-img2.png',
+      userImage: 'assets/images/thumbs/user-two-img2.png',
+      categories: [
+        {
+          name: 'Python',
+          class: 'text-main-600 bg-main-25 hover-bg-main-600 hover-text-white'
+        },
+        {
+          name: 'Beginner',
+          class: 'text-main-three-600 bg-main-three-25 hover-bg-main-three-600 hover-text-white'
+        }
+      ],
+      title: 'Mastering Python : From Zero to Hero',
+      lessons: 20,
+      duration: '9h 36m',
+      students: '1.5K',
+      price: '$148',
+      rating: 5,
+      ratingCount: '6.4k',
+      aos: { animation: 'fade-up', duration: 400 }
+    },
+    {
+      image: 'assets/images/thumbs/course-img3.png',
+      userImage: 'assets/images/thumbs/user-two-img3.png',
+      categories: [
+        {
+          name: 'Graphic Design',
+          class: 'text-main-600 bg-main-25 hover-bg-main-600 hover-text-white'
+        },
+        {
+          name: 'Beginner',
+          class: 'text-main-three-600 bg-main-three-25 hover-bg-main-three-600 hover-text-white'
+        }
+      ],
+      title: "Beginner's Guide to Adobe Photoshop",
+      lessons: 20,
+      duration: '9h 36m',
+      students: '1.5K',
+      price: '$148',
+      rating: 3,
+      ratingCount: '6.4k',
+      aos: { animation: 'fade-up', duration: 600 }
+    },
+    {
+      image: 'assets/images/thumbs/course-img3.png',
+      userImage: 'assets/images/thumbs/user-two-img3.png',
+      categories: [
+        {
+          name: 'ART Design',
+          class: 'text-main-600 bg-main-25 hover-bg-main-600 hover-text-white'
+        },
+        {
+          name: 'Beginner',
+          class: 'text-main-three-600 bg-main-three-25 hover-bg-main-three-600 hover-text-white'
+        }
+      ],
+      title: 'The Art of Public Speaking online Course',
+      lessons: 20,
+      duration: '9h 36m',
+      students: '1.5K',
+      price: '$148',
+      rating: 4,
+      ratingCount: '6.4k',
+      aos: { animation: 'fade-up', duration: 200 }
+    }
+  ];
+
+
+
+
+
+
   slickPrev(slick: any) {
     slick.slickPrev();
   }

@@ -1,11 +1,18 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
+import { LineChartComponent } from '../../shared/line-chart/line-chart.component';
+import { DonutChartComponent } from '../../shared/donut-chart/donut-chart.component';
+
+
+
+
 
 @Component({
   selector: 'app-admin-dashbord',
-  imports: [RouterLink,CommonModule],
+  imports: [CommonModule,RouterLink,DashboardSidebarComponent,LineChartComponent,DonutChartComponent],
   templateUrl: './admin-dashbord.component.html',
   styleUrl: './admin-dashbord.component.scss'
 })

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Select2, Select2Data } from 'ng-select2-component';
 
 @Component({
@@ -10,10 +10,11 @@ import { Select2, Select2Data } from 'ng-select2-component';
   styleUrls: ['./category-dropdown.component.scss']
 })
 export class CategoryDropdownComponent {
-  // public options: Options = {
-  //   width: '100%',
-  //   placeholder: 'Categories'
-  // };
+  isBrowser: boolean = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    this.isBrowser = isPlatformBrowser(platformId);
+  }
 
   categories: Select2Data = [
     { value: '', label: 'Categories' },

@@ -67,95 +67,95 @@ export class Index3Component {
   };
 
   blogPosts = [
-  {
-    image: 'assets/images/thumbs/blog-two-img1.png',
-    date: '21',
-    month: 'DEC',
-    title: 'Navigating the Job Market: Advice for Graduates',
-    views: '1.6k',
-    comments: '24',
-    author: 'Admin'
-  },
-  {
-    image: 'assets/images/thumbs/blog-two-img2.png',
-    date: '21',
-    month: 'DEC',
-    title: 'The Importance of Diversity in Higher Education',
-    views: '1.6k',
-    comments: '24',
-    author: 'Admin'
-  },
-  {
-    image: 'assets/images/thumbs/blog-two-img3.png',
-    date: '21',
-    month: 'DEC',
-    title: '10 Tips for Successful Online Learning',
-    views: '1.6k',
-    comments: '24',
-    author: 'Admin'
-  },
-  {
-    image: 'assets/images/thumbs/blog-two-img2.png',
-    date: '21',
-    month: 'DEC',
-    title: 'The Importance of Diversity in Higher Education',
-    views: '1.6k',
-    comments: '24',
-    author: 'Admin'
-  }
-];
+    {
+      image: 'assets/images/thumbs/blog-two-img1.png',
+      date: '21',
+      month: 'DEC',
+      title: 'Navigating the Job Market: Advice for Graduates',
+      views: '1.6k',
+      comments: '24',
+      author: 'Admin'
+    },
+    {
+      image: 'assets/images/thumbs/blog-two-img2.png',
+      date: '21',
+      month: 'DEC',
+      title: 'The Importance of Diversity in Higher Education',
+      views: '1.6k',
+      comments: '24',
+      author: 'Admin'
+    },
+    {
+      image: 'assets/images/thumbs/blog-two-img3.png',
+      date: '21',
+      month: 'DEC',
+      title: '10 Tips for Successful Online Learning',
+      views: '1.6k',
+      comments: '24',
+      author: 'Admin'
+    },
+    {
+      image: 'assets/images/thumbs/blog-two-img2.png',
+      date: '21',
+      month: 'DEC',
+      title: 'The Importance of Diversity in Higher Education',
+      views: '1.6k',
+      comments: '24',
+      author: 'Admin'
+    }
+  ];
 
-blogConfig = {
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  arrows: true,
-  prevArrow: '#blog-two-prev',
-  nextArrow: '#blog-two-next',
-  responsive: [
-    { breakpoint: 1200, settings: { slidesToShow: 2 } },
-    { breakpoint: 768, settings: { slidesToShow: 1 } }
-  ]
-  
-};
+  blogConfig = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    prevArrow: '#blog-two-prev',
+    nextArrow: '#blog-two-next',
+    responsive: [
+      { breakpoint: 1200, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } }
+    ]
 
-testimonials = [
-  {
-    image: 'assets/images/thumbs/testimonials-three-img2.png',
-    text: `Attending [University Name] was one of the best decisions I've made. The`,
-    name: 'Ronald Richards',
-    role: 'Student'
-  },
-  {
-    image: 'assets/images/thumbs/testimonials-three-img1.png',
-    text: `"The faculty at are not only experts in their fields but teaching students."`,
-    name: 'Brooklyn Simmons',
-    role: 'Student'
-  },
-  {
-    image: 'assets/images/thumbs/testimonials-three-img3.png',
-    text: `As a faculty member at [University Name], I've had the privilege of working`,
-    name: 'Courtney Henry',
-    role: 'Student'
-  },
-  {
-    image: 'assets/images/thumbs/testimonials-three-img3.png',
-    text: `"The faculty at are not only experts in their fields but teaching students."`,
-    name: 'Brooklyn Simmons',
-    role: 'Student'
-  }
-];
+  };
 
-testimonialConfig = {
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-  arrows: false, // Disable arrows
-  dots: false,
-  infinite: true
-};
+  testimonials = [
+    {
+      image: 'assets/images/thumbs/testimonials-three-img2.png',
+      text: `Attending [University Name] was one of the best decisions I've made. The`,
+      name: 'Ronald Richards',
+      role: 'Student'
+    },
+    {
+      image: 'assets/images/thumbs/testimonials-three-img1.png',
+      text: `"The faculty at are not only experts in their fields but teaching students."`,
+      name: 'Brooklyn Simmons',
+      role: 'Student'
+    },
+    {
+      image: 'assets/images/thumbs/testimonials-three-img3.png',
+      text: `As a faculty member at [University Name], I've had the privilege of working`,
+      name: 'Courtney Henry',
+      role: 'Student'
+    },
+    {
+      image: 'assets/images/thumbs/testimonials-three-img3.png',
+      text: `"The faculty at are not only experts in their fields but teaching students."`,
+      name: 'Brooklyn Simmons',
+      role: 'Student'
+    }
+  ];
+
+  testimonialConfig = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false, // Disable arrows
+    dots: false,
+    infinite: true
+  };
 
 
 

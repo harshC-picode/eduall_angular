@@ -6,7 +6,7 @@ import { Footer2Component } from '../footer2/footer2.component';
 
 @Component({
   selector: 'app-layoutall2',
-  imports: [Header2Component,SidebarComponent,RouterOutlet,Footer2Component],
+  imports: [RouterOutlet,Footer2Component,Header2Component],
   templateUrl: './layoutall2.component.html',
   styleUrl: './layoutall2.component.scss'
 })

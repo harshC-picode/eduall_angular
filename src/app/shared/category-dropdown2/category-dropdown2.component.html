@@ -1,0 +1,17 @@
+<div class="d-sm-block d-none">
+    <div class="student-dashboard-select border-neutral-600 text-white border rounded-pill position-relative">
+
+        <ng-container *ngIf="isBrowser"> 
+            <span
+                class="select-icon position-absolute top-50 d-xxl-block d-none translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
+                <i class="ph-bold ph-squares-four"></i>
+            </span>
+            <select2 class="js-example-basic-single text-white student-dashboard-select border-0 w-100 bg-transparent px-12 py-8 h-52"
+                [data]="categories"
+                placeholder="Categories"
+                name="category">
+            </select2>
+        </ng-container>
+
+    </div>
+</div>

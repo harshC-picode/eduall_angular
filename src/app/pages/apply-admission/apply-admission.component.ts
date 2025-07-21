@@ -4,7 +4,7 @@ import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.componen
 
 @Component({
   selector: 'app-apply-admission',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [BreadcrumbComponent],
   templateUrl: './apply-admission.component.html',
   styleUrl: './apply-admission.component.scss'
 })

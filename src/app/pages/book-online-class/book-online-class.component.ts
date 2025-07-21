@@ -4,7 +4,7 @@ import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.componen
 
 @Component({
   selector: 'app-book-online-class',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [BreadcrumbComponent],
   templateUrl: './book-online-class.component.html',
   styleUrl: './book-online-class.component.scss'
 })

@@ -2,71 +2,7 @@
     <div class="d-flex">
         
 <!-- ========Dashdord Sidebar start======== -->
-<div class="dashboard-sidebar px-20 py-24 max-w-288-px bg-white w-100 border-end border-neutral-40 position-relative">
-    <a href="#">
-      <img src="assets/images/logo/logo.png" alt="" class="">
-    </a>
-    <span class="w-100 bg-neutral-40 mb-24 mt-24 h-1"></span>
-     <div class="overflow-x-auto">
-        <div class="scrollbar min-w-max"> 
-            <span class="text-neutral-500 fw-normal text-14 mb-8">Welcome Henry,</span>
-               <ul>
-                   <li class="mb-8">
-                       <a [routerLink]="['/admin-dashbord']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph-bold ph-house"></i></span>
-                       Dashboard</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/my-profile']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-user-circle"></i></span>
-                       My Profile</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-message']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-chat-dots"></i></span>
-                       Message</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-courses']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-watch"></i></span>
-                       Courses</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-wishlist']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-bookmark-simple"></i></span>
-                       Wishlist</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-reviews']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-sparkle"></i></span>
-                       Reviews</a>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-quiz-attempts']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-seal-question"></i></span>
-                       Quiz Attempts</a>
-                   </li>
-                   <li class="mb-8">
-                       <span class="fw-normal text-14 text-neutral-500">Admin</span>
-                   </li>
-                   <li class="mb-8">
-                       <a [routerLink]="['/dashbord-settings']" class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
-                       <span class="text-16 text-main-600 item-hover__text transition-03"><i class="ph ph-gear"></i></span>
-                       Settings</a>
-                   </li>
-               </ul>
-           </div>
-     </div>
-
-     <div class="position-absolute inset-block-end-0 inset-inline-start-0 pb-16 px-16 w-100">
-         <a [routerLink]="['/sign-in']" class=" text-14 fw-medium text-neutral-500 d-flex align-items-center gap-8  hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap bg-white">
-             <span class="text-16 text-main-600 item-hover__text transition-03">
-                 <i class="ph ph-sign-out"></i>
-             </span>
-             Logout
-         </a>
-     </div>
-</div>
+<app-dashboard-sidebar></app-dashboard-sidebar>
 <!-- ========Dashdord Sidebar end======== -->
 
          <div class="dashbord-body my-profile flex-grow-1">
@@ -168,19 +104,19 @@
                 </button>
                 <ul class="dropdown-menu rounded-12">
                     <li>
-                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="my-profile.html">
+                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" [routerLink]="['/my-profile']">
                         <span><i class="ph ph-user-circle"></i></span>
                         <span>My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="dashbord-settings.html">
+                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" [routerLink]="['/dashbord-settings']">
                         <span><i class="ph ph-gear"></i></span>
                         <span>Settings</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" href="sign-in.html">
+                        <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03" [routerLink]="['/sign-in']">
                         <span><i class="ph ph-power"></i></span>
                         <span>Log Out</span>
                         </a>

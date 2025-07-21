@@ -4,7 +4,7 @@ import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.componen
 
 @Component({
   selector: 'app-gallery',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [BreadcrumbComponent],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.scss'
 })

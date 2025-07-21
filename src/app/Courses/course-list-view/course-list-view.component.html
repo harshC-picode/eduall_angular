@@ -96,7 +96,7 @@
                                     <span class="text-neutral-500">4955</span>
                                 </div>
                             </div>
-                            <a [routerLink]="['course.html']" class="text-sm text-main-600 fw-semibold mt-24 hover-text-decoration-underline">See All </a>
+                            <a [routerLink]="['/course']" class="text-sm text-main-600 fw-semibold mt-24 hover-text-decoration-underline">See All </a>
                             <span class="d-block border border-neutral-30 border-dashed my-24"></span>
     
                             <h6 class="text-lg mb-24 fw-medium">Pricing scale</h6>
@@ -165,15 +165,15 @@
     
                             <h6 class="text-lg mb-24 fw-medium">Popular Tags</h6>
                             <div class="flex-align flex-wrap gap-12">
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">UI/UX Design</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Web Development</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Wordpress</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Machine Learning</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">AI</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Laravel</a>
-                                <a [routerLink]="['course.html']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Python</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">UI/UX Design</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Web Development</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Wordpress</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Machine Learning</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">AI</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Laravel</a>
+                                <a [routerLink]="['/course']" class="border border-neutral-30 px-20 py-12 rounded-pill bg-white text-neutral-500 hover-border-main-600 hover-text-main-600">Python</a>
                             </div>
-                            <a [routerLink]="['course.html']" class="text-sm text-main-600 fw-semibold mt-24 hover-text-decoration-underline">More Tags </a>
+                            <a [routerLink]="['/course']" class="text-sm text-main-600 fw-semibold mt-24 hover-text-decoration-underline">More Tags </a>
                             <span class="d-block border border-neutral-30 border-dashed my-24"></span>
     
                             <h6 class="text-lg mb-24 fw-medium">Level</h6>
@@ -223,501 +223,63 @@
                             </div>
                         </div>
                         <div class="row gy-4">
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img1.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction to Digital Marketing</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img1.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">AnikaZ</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$148</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img2.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">25h 06m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction to Python Programming</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img2.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Wade</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$499</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img3.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction to Photography Masterclass</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img3.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Cody</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$457</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img4.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish Language Mastery: Beginner to Fluent</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img4.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Dustin</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$148</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img5.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Financial Planning for Millennials</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img5.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Bruce</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$546</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img6.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition Essentials for Healthy Living</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img6.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Robert</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$345</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img7.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition Essentials for Healthy Living</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img2.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Robert</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$345</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img9.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition Essentials for Healthy Living</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img3.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Robert</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$345</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
-                                    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                        <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                            <img src="assets/images/thumbs/course-img8.png" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
-                                        </a>
-                                        <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                            <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                            <span class="text-lg fw-medium">9h 36m</span>
-                                        </div>
-                                        <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                            <i class="ph ph-heart"></i>
-                                        </button>
-                                    </div>
-                                    <div class="course-item__content flex-grow-1">
-                                        <div class="">
-                                            <h4 class="mb-28">
-                                                <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition Essentials for Healthy Living</a>
-                                            </h4>
-                                            <div class="flex-between gap-8 flex-wrap mb-16">
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-between gap-8 flex-wrap">
-                                                <div class="flex-align gap-4">
-                                                    <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
-                                                    <span class="text-lg text-neutral-700">
-                                                        4.7
-                                                        <span class="text-neutral-100">(6.4k)</span>
-                                                    </span>
-                                                </div>
-                                                <div class="flex-align gap-8">
-                                                    <span class="text-neutral-700 text-2xl d-flex">
-                                                        <img src="assets/images/thumbs/user-img1.png" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
-                                                    </span>
-                                                    <span class="text-neutral-700 text-lg fw-medium">Robert</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                            <h4 class="mb-0 text-main-two-600">$345</h4>
-                                            <a [routerLink]="['apply-admission.html']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
-                                                Enroll Now
-                                                <i class="ph ph-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="col-12" *ngFor="let course of courses">
+  <div class="course-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30 list-view">
+    <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
+      <a [routerLink]="['/course-details']" class="w-100 h-100">
+        <img [src]="course.image" alt="Course Image" class="course-item__img rounded-12 cover-img transition-2">
+      </a>
+      <div class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
+        <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
+        <span class="text-lg fw-medium">{{ course.duration }}</span>
+      </div>
+      <button type="button" class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
+        <i class="ph ph-heart"></i>
+      </button>
+    </div>
+    <div class="course-item__content flex-grow-1">
+      <div class="">
+        <h4 class="mb-28">
+          <a [routerLink]="['/course-details']" class="link text-line-2">{{ course.title }}</a>
+        </h4>
+        <div class="flex-between gap-8 flex-wrap mb-16">
+          <div class="flex-align gap-8">
+            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-video-camera"></i></span>
+            <span class="text-neutral-700 text-lg fw-medium">{{ course.lessons }} Lessons</span>
+          </div>
+          <div class="flex-align gap-8">
+            <span class="text-neutral-700 text-2xl d-flex"><i class="ph-bold ph-chart-bar"></i></span>
+            <span class="text-neutral-700 text-lg fw-medium">{{ course.level }}</span>
+          </div>
+        </div>
+        <div class="flex-between gap-8 flex-wrap">
+          <div class="flex-align gap-4">
+            <span class="text-2xl fw-medium text-warning-600 d-flex"><i class="ph-fill ph-star"></i></span>
+            <span class="text-lg text-neutral-700">
+              {{ course.rating }}
+              <span class="text-neutral-100">({{ course.reviews }})</span>
+            </span>
+          </div>
+          <div class="flex-align gap-8">
+            <span class="text-neutral-700 text-2xl d-flex">
+              <img [src]="course.userImage" alt="User Image" class="w-32 h-32 object-fit-cover rounded-circle">
+            </span>
+            <span class="text-neutral-700 text-lg fw-medium">{{ course.userName }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
+        <h4 class="mb-0 text-main-two-600">{{ course.price }}</h4>
+        <a [routerLink]="['/apply-admission']" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+          Enroll Now
+          <i class="ph ph-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+                            
                         </div>
                         
                     </div>

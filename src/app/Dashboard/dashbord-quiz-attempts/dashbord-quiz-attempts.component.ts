@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
 
 @Component({
   selector: 'app-dashbord-quiz-attempts',
-  imports: [RouterLink,CommonModule],
+  imports: [RouterLink,CommonModule,DashboardSidebarComponent],
   templateUrl: './dashbord-quiz-attempts.component.html',
   styleUrl: './dashbord-quiz-attempts.component.scss'
 })

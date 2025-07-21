@@ -1,4 +1,4 @@
-<div class="d-sm-block d-none">
+<!-- <div class="d-sm-block d-none">
     <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
 
         <ng-container>
@@ -11,4 +11,31 @@
             </select2>
         </ng-container>
     </div>
+</div> -->
+
+
+<!-- working -->
+
+<div class="d-sm-block d-none">
+    <div class="header-select border border-neutral-30 bg-main-25 rounded-pill position-relative">
+
+        <ng-container *ngIf="isBrowser"> 
+            <span
+                class="select-icon d-xxl-block d-none position-absolute top-50 translate-middle-y inset-inline-start-0 z-1 ms-lg-4 ms-12 text-xl pointer-event-none d-flex">
+                <i class="ph-bold ph-squares-four"></i>
+            </span>
+            <select2 class="js-example-basic-single border-0 w-100 bg-transparent px-12 py-8 h-52"
+                [data]="categories"
+                placeholder="Categories"
+                name="category">
+            </select2>
+        </ng-container>
+
+    </div>
 </div>
+
+
+
+
+
+

@@ -28,7 +28,7 @@
             <div class="col-lg-4 col-sm-6" *ngFor="let blog of blogs">
                 <div class="scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
                     <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                        <a [routerLink]="['blog-details.html']" class="w-100 h-100">
+                        <a [routerLink]="['/blog-details']" class="w-100 h-100">
                             <img [src]="blog.image" alt="Blog Image"
                                 class="scale-hover-item__img rounded-12 cover-img transition-2">
                         </a>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="pt-32 pb-24 px-16 position-relative">
                         <h4 class="mb-28">
-                            <a [routerLink]="['blog-details.html']" class="link text-line-2">{{ blog.title }}</a>
+                            <a [routerLink]="['/blog-details']" class="link text-line-2">{{ blog.title }}</a>
                         </h4>
                         <div class="flex-align gap-14 flex-wrap my-20">
                             <div class="flex-align gap-8">
@@ -59,7 +59,7 @@
                             </div>
                         </div>
                         <div class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                            <a [routerLink]="['blog-details.html']"
+                            <a [routerLink]="['/blog-details']"
                                 class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                 tabindex="0">
                                 Read More

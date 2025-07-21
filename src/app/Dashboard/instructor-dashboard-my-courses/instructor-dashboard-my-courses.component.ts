@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/instructor-sidebar.component';
 
 @Component({
   selector: 'app-instructor-dashboard-my-courses',
-  imports: [RouterLink,CommonModule],
+  imports: [RouterLink,CommonModule,InstructorSidebarComponent],
   templateUrl: './instructor-dashboard-my-courses.component.html',
   styleUrl: './instructor-dashboard-my-courses.component.scss'
 })

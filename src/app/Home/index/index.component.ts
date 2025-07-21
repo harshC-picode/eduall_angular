@@ -104,4 +104,87 @@ export class IndexComponent {
     infinite: true,
     speed: 600
   };
+
+  courseList = [
+    {
+      img: 'assets/images/thumbs/course-img1.png',
+      time: '9h 36m',
+      title: 'Introduction to Digital Marketing',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img1.png',
+      userName: 'AnikaZ',
+      price: '$148',
+      aos: 200
+    },
+    {
+      img: 'assets/images/thumbs/course-img2.png',
+      time: '25h 06m',
+      title: 'Introduction to Python Programming',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img2.png',
+      userName: 'Wade',
+      price: '$499',
+      aos: 400
+    },
+    {
+      img: 'assets/images/thumbs/course-img3.png',
+      time: '9h 36m',
+      title: 'Introduction to Photography Masterclass',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img3.png',
+      userName: 'Cody',
+      price: '$457',
+      aos: 600
+    },
+    {
+      img: 'assets/images/thumbs/course-img4.png',
+      time: '9h 36m',
+      title: 'Spanish Language Mastery: Beginner to Fluent',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img4.png',
+      userName: 'Dustin',
+      price: '$148',
+      aos: 200
+    },
+    {
+      img: 'assets/images/thumbs/course-img5.png',
+      time: '9h 36m',
+      title: 'Financial Planning for Millennials',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img5.png',
+      userName: 'Bruce',
+      price: '$546',
+      aos: 400
+    },
+    {
+      img: 'assets/images/thumbs/course-img6.png',
+      time: '9h 36m',
+      title: 'Nutrition Essentials for Healthy Living',
+      lessons: '20 Lessons',
+      level: 'Beginner',
+      rating: 4.7,
+      reviews: '6.4k',
+      userImg: 'assets/images/thumbs/user-img6.png',
+      userName: 'Robert',
+      price: '$345',
+      aos: 600
+    }
+  ];
 }
+
+

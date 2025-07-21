@@ -1,13 +1,94 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-favorite-course',
-  imports: [RouterLink,BreadcrumbComponent],
+  imports: [RouterLink,BreadcrumbComponent,CommonModule],
   templateUrl: './favorite-course.component.html',
   styleUrl: './favorite-course.component.scss'
 })
 export class FavoriteCourseComponent {
+courses = [
+  {
+    image: 'assets/images/thumbs/course-img1.png',
+    duration: '9h 36m',
+    title: 'Introduction to Digital Marketing',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img1.png',
+    userName: 'AnikaZ',
+    price: '$148',
+    aosDelay: '200'
+  },
+  {
+    image: 'assets/images/thumbs/course-img2.png',
+    duration: '25h 06m',
+    title: 'Introduction to Python Programming',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img2.png',
+    userName: 'Wade',
+    price: '$499',
+    aosDelay: '400'
+  },
+  {
+    image: 'assets/images/thumbs/course-img3.png',
+    duration: '9h 36m',
+    title: 'Introduction to Photography Masterclass',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img3.png',
+    userName: 'Cody',
+    price: '$457',
+    aosDelay: '600'
+  },
+  {
+    image: 'assets/images/thumbs/course-img4.png',
+    duration: '9h 36m',
+    title: 'Spanish Language Mastery: Beginner to Fluent',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img4.png',
+    userName: 'Dustin',
+    price: '$148',
+    aosDelay: '200'
+  },
+  {
+    image: 'assets/images/thumbs/course-img1.png',
+    duration: '9h 36m',
+    title: 'Introduction to Digital Marketing',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img1.png',
+    userName: 'AnikaZ',
+    price: '$148',
+    aosDelay: '200'
+  },
+  {
+    image: 'assets/images/thumbs/course-img2.png',
+    duration: '25h 06m',
+    title: 'Introduction to Python Programming',
+    lessons: 20,
+    level: 'Beginner',
+    rating: 4.7,
+    reviews: '6.4k',
+    userImage: 'assets/images/thumbs/user-img2.png',
+    userName: 'Wade',
+    price: '$499',
+    aosDelay: '400'
+  }
+];
 
 }

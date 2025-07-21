@@ -25,12 +25,12 @@
                     <p class="text-neutral-500 text-line-2 wow bounceInUp">Welcome to EduAll, where learning knows no
                         bounds. Whether you're a student, professional, or lifelong learner...</p>
                     <div class="buttons-wrapper flex-align flex-wrap gap-24 mt-40">
-                        <a [routerLink]="['course.html']" class="btn btn-main rounded-pill flex-align gap-8"
+                        <a [routerLink]="['/course']" class="btn btn-main rounded-pill flex-align gap-8"
                             data-aos="fade-right">
                             Browse Courses
                             <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
                         </a>
-                        <a [routerLink]="['about.html']" class="btn btn-outline-main rounded-pill flex-align gap-8"
+                        <a [routerLink]="['/about']" class="btn btn-outline-main rounded-pill flex-align gap-8"
                             data-aos="fade-left">
                             About Us
                             <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
@@ -96,54 +96,54 @@
 
 <!-- ========================== Brand Section Start =========================== -->
 <div class="brand wow fadeInUpBig">
-  <div class="container container--lg">
-    <div class="brand-box py-80 px-16">
-      <h5 class="mb-40 text-center text-neutral-500">TRUSTED BY OVER 17,300 GREAT TEAMS</h5>
-      <ngx-slick-carousel class="brand-slider" [config]="brandSlideConfig">
-        <div ngxSlickItem *ngFor="let brand of brandImages" class="brand-slider__item px-20">
-          <img [src]="brand" alt="Brand Image" />
+    <div class="container container--lg">
+        <div class="brand-box py-80 px-16">
+            <h5 class="mb-40 text-center text-neutral-500">TRUSTED BY OVER 17,300 GREAT TEAMS</h5>
+            <ngx-slick-carousel class="brand-slider" [config]="brandSlideConfig">
+                <div ngxSlickItem *ngFor="let brand of brandImages" class="brand-slider__item px-20">
+                    <img [src]="brand" alt="Brand Image" />
+                </div>
+            </ngx-slick-carousel>
         </div>
-      </ngx-slick-carousel>
     </div>
-  </div>
 </div>
 
 <!-- ========================== Brand Section End =========================== -->
 
 <!-- ============================= Features Section Start ============================== -->
 <section class="features py-120 position-relative overflow-hidden">
-  <img src="assets/images/shapes/shape2.png" class="shape two animation-scalation" alt="">
-  <img src="assets/images/shapes/shape4.png" class="shape six animation-walking" alt="">
+    <img src="assets/images/shapes/shape2.png" class="shape two animation-scalation" alt="">
+    <img src="assets/images/shapes/shape4.png" class="shape six animation-walking" alt="">
 
-  <div class="container">
-    <div class="section-heading text-center">
-      <h2 class="mb-24 wow bounceIn">
-        Explore 4,000+ Free Online Courses For Students
-      </h2>
-      <p class="wow bounceInUp">
-        Welcome to our diverse and dynamic course catalog.
-      </p>
-    </div>
-
-    <ngx-slick-carousel class="features-slider" [config]="featuresSlideConfig">
-      <div ngxSlickItem *ngFor="let feature of features" class="px-8" [attr.data-aos]="'zoom-in'"
-        [attr.data-aos-duration]="feature.duration">
-        <div
-          class="features-item item-hover animation-item bg-main-25 border border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600">
-          <span class="mb-32 w-110 h-110 flex-center bg-white rounded-circle">
-            <img [src]="feature.icon" class="animate__bounce" alt="">
-          </span>
-          <h4 class="mb-16 transition-1 item-hover__text">{{ feature.title }}</h4>
-          <p class="transition-1 item-hover__text text-line-2">{{ feature.description }}</p>
-          <a [routerLink]="['course-list-view.html']"
-            class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1">
-            View Category
-            <i class="ph ph-arrow-right"></i>
-          </a>
+    <div class="container">
+        <div class="section-heading text-center">
+            <h2 class="mb-24 wow bounceIn">
+                Explore 4,000+ Free Online Courses For Students
+            </h2>
+            <p class="wow bounceInUp">
+                Welcome to our diverse and dynamic course catalog.
+            </p>
         </div>
-      </div>
-    </ngx-slick-carousel>
-  </div>
+
+        <ngx-slick-carousel class="features-slider" [config]="featuresSlideConfig">
+            <div ngxSlickItem *ngFor="let feature of features" class="px-8" [attr.data-aos]="'zoom-in'"
+                [attr.data-aos-duration]="feature.duration">
+                <div
+                    class="features-item item-hover animation-item bg-main-25 border border-neutral-30 rounded-16 transition-1 hover-bg-main-600 hover-border-main-600">
+                    <span class="mb-32 w-110 h-110 flex-center bg-white rounded-circle">
+                        <img [src]="feature.icon" class="animate__bounce" alt="">
+                    </span>
+                    <h4 class="mb-16 transition-1 item-hover__text">{{ feature.title }}</h4>
+                    <p class="transition-1 item-hover__text text-line-2">{{ feature.description }}</p>
+                    <a [routerLink]="['/course-list-view']"
+                        class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1">
+                        View Category
+                        <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
 </section>
 
 <!-- ============================= Features Section End ============================== -->
@@ -160,7 +160,7 @@
             <div class="section-heading__content">
                 <p class="section-heading__desc text-start mt-0 text-line-2 wow bounceInUp">Welcome to our diverse and
                     dynamic course catalog. we're dedicated to providing you...</p>
-                <a [routerLink]="['course-list-view.html']"
+                <a [routerLink]="['/course-list-view']"
                     class="item-hover__text flex-align gap-8 text-main-600 mt-24 hover-text-decoration-underline transition-1"
                     tabindex="0">
                     See All Course
@@ -232,17 +232,18 @@
                 aria-labelledby="pills-categories-tab" tabindex="0">
                 <div class="row gy-4">
 
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
+                    <div class="col-lg-4 col-sm-6 wow fadeInUp" *ngFor="let course of courseList"
+                        [attr.data-aos]="course.aos" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
+                                    <img [src]="course.img" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
                                 <div
                                     class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
                                     <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">9h 36m</span>
+                                    <span class="text-lg fw-medium">{{ course.time }}</span>
                                 </div>
                                 <button type="button"
                                     class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
@@ -250,21 +251,21 @@
                                 </button>
                             </div>
                             <div class="course-item__content">
-                                <div class="">
+                                <div>
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
-                                            to Digital Marketing</a>
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">{{
+                                            course.title }}</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
                                         <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i
                                                     class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{ course.lessons }}</span>
                                         </div>
                                         <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex"><i
                                                     class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{ course.level }}</span>
                                         </div>
                                     </div>
                                     <div class="flex-between gap-8 flex-wrap">
@@ -272,23 +273,24 @@
                                             <span class="text-2xl fw-medium text-warning-600 d-flex"><i
                                                     class="ph-fill ph-star"></i></span>
                                             <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
+                                                {{ course.rating }}
+                                                <span class="text-neutral-100">({{ course.reviews }})</span>
                                             </span>
                                         </div>
                                         <div class="flex-align gap-8">
                                             <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img1.png" alt="User Image"
+                                                <img [src]="course.userImg" alt="User Image"
                                                     class="w-32 h-32 object-fit-cover rounded-circle">
                                             </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">AnikaZ</span>
+                                            <span class="text-neutral-700 text-lg fw-medium">{{ course.userName
+                                                }}</span>
                                         </div>
                                     </div>
                                 </div>
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <h4 class="mb-0 text-main-two-600">{{ course.price }}</h4>
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -299,336 +301,6 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
-                                        class="course-item__img rounded-12 cover-img transition-2">
-                                </a>
-                                <div
-                                    class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">25h 06m</span>
-                                </div>
-                                <button type="button"
-                                    class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                    <i class="ph ph-heart"></i>
-                                </button>
-                            </div>
-                            <div class="course-item__content">
-                                <div class="">
-                                    <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
-                                            to Python Programming</a>
-                                    </h4>
-                                    <div class="flex-between gap-8 flex-wrap mb-16">
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-between gap-8 flex-wrap">
-                                        <div class="flex-align gap-4">
-                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i
-                                                    class="ph-fill ph-star"></i></span>
-                                            <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
-                                            </span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img2.png" alt="User Image"
-                                                    class="w-32 h-32 object-fit-cover rounded-circle">
-                                            </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Wade</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
-                                        class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                        tabindex="0">
-                                        Enroll Now
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
-                                        class="course-item__img rounded-12 cover-img transition-2">
-                                </a>
-                                <div
-                                    class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">9h 36m</span>
-                                </div>
-                                <button type="button"
-                                    class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                    <i class="ph ph-heart"></i>
-                                </button>
-                            </div>
-                            <div class="course-item__content">
-                                <div class="">
-                                    <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
-                                            to Photography Masterclass</a>
-                                    </h4>
-                                    <div class="flex-between gap-8 flex-wrap mb-16">
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-between gap-8 flex-wrap">
-                                        <div class="flex-align gap-4">
-                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i
-                                                    class="ph-fill ph-star"></i></span>
-                                            <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
-                                            </span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img3.png" alt="User Image"
-                                                    class="w-32 h-32 object-fit-cover rounded-circle">
-                                            </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Cody</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
-                                        class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                        tabindex="0">
-                                        Enroll Now
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
-                                        class="course-item__img rounded-12 cover-img transition-2">
-                                </a>
-                                <div
-                                    class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">9h 36m</span>
-                                </div>
-                                <button type="button"
-                                    class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                    <i class="ph ph-heart"></i>
-                                </button>
-                            </div>
-                            <div class="course-item__content">
-                                <div class="">
-                                    <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
-                                            Language Mastery: Beginner to Fluent</a>
-                                    </h4>
-                                    <div class="flex-between gap-8 flex-wrap mb-16">
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-between gap-8 flex-wrap">
-                                        <div class="flex-align gap-4">
-                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i
-                                                    class="ph-fill ph-star"></i></span>
-                                            <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
-                                            </span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img4.png" alt="User Image"
-                                                    class="w-32 h-32 object-fit-cover rounded-circle">
-                                            </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Dustin</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
-                                        class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                        tabindex="0">
-                                        Enroll Now
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
-                                        class="course-item__img rounded-12 cover-img transition-2">
-                                </a>
-                                <div
-                                    class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">9h 36m</span>
-                                </div>
-                                <button type="button"
-                                    class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                    <i class="ph ph-heart"></i>
-                                </button>
-                            </div>
-                            <div class="course-item__content">
-                                <div class="">
-                                    <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
-                                            Planning for Millennials</a>
-                                    </h4>
-                                    <div class="flex-between gap-8 flex-wrap mb-16">
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-between gap-8 flex-wrap">
-                                        <div class="flex-align gap-4">
-                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i
-                                                    class="ph-fill ph-star"></i></span>
-                                            <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
-                                            </span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img5.png" alt="User Image"
-                                                    class="w-32 h-32 object-fit-cover rounded-circle">
-                                            </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Bruce</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
-                                        class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                        tabindex="0">
-                                        Enroll Now
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
-                        <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
-                            <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
-                                    <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
-                                        class="course-item__img rounded-12 cover-img transition-2">
-                                </a>
-                                <div
-                                    class="flex-align gap-8 bg-main-600 rounded-pill px-24 py-12 text-white position-absolute inset-block-start-0 inset-inline-start-0 mt-20 ms-20 z-1">
-                                    <span class="text-2xl d-flex"><i class="ph ph-clock"></i></span>
-                                    <span class="text-lg fw-medium">9h 36m</span>
-                                </div>
-                                <button type="button"
-                                    class="wishlist-btn w-48 h-48 bg-white text-main-two-600 flex-center position-absolute inset-block-start-0 inset-inline-end-0 mt-20 me-20 z-1 text-2xl rounded-circle transition-2">
-                                    <i class="ph ph-heart"></i>
-                                </button>
-                            </div>
-                            <div class="course-item__content">
-                                <div class="">
-                                    <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
-                                            Essentials for Healthy Living</a>
-                                    </h4>
-                                    <div class="flex-between gap-8 flex-wrap mb-16">
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-video-camera"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">20 Lessons</span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex"><i
-                                                    class="ph-bold ph-chart-bar"></i></span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Beginner</span>
-                                        </div>
-                                    </div>
-                                    <div class="flex-between gap-8 flex-wrap">
-                                        <div class="flex-align gap-4">
-                                            <span class="text-2xl fw-medium text-warning-600 d-flex"><i
-                                                    class="ph-fill ph-star"></i></span>
-                                            <span class="text-lg text-neutral-700">
-                                                4.7
-                                                <span class="text-neutral-100">(6.4k)</span>
-                                            </span>
-                                        </div>
-                                        <div class="flex-align gap-8">
-                                            <span class="text-neutral-700 text-2xl d-flex">
-                                                <img src="assets/images/thumbs/user-img6.png" alt="User Image"
-                                                    class="w-32 h-32 object-fit-cover rounded-circle">
-                                            </span>
-                                            <span class="text-neutral-700 text-lg fw-medium">Robert</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div
-                                    class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                                    <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
-                                        class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
-                                        tabindex="0">
-                                        Enroll Now
-                                        <i class="ph ph-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="tab-pane fade" id="pills-design" role="tabpanel" aria-labelledby="pills-design-tab"
@@ -638,7 +310,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -655,7 +327,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Digital Marketing</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -691,7 +363,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -705,7 +377,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -722,7 +394,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Python Programming</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -758,7 +430,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -771,7 +443,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -788,7 +460,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Photography Masterclass</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -824,7 +496,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -837,7 +509,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -854,7 +526,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Spanish
                                             Language Mastery: Beginner to Fluent</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -890,7 +562,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -903,7 +575,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -920,7 +592,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Financial
                                             Planning for Millennials</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -956,7 +628,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -969,7 +641,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -986,7 +658,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Nutrition
                                             Essentials for Healthy Living</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1022,7 +694,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1041,7 +713,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1058,7 +730,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Digital Marketing</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1094,7 +766,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1108,7 +780,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1125,7 +797,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Python Programming</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1161,7 +833,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1174,7 +846,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1191,7 +863,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Photography Masterclass</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1227,7 +899,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1240,7 +912,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1257,7 +929,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Spanish
                                             Language Mastery: Beginner to Fluent</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1293,7 +965,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1306,7 +978,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1323,7 +995,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Financial
                                             Planning for Millennials</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1359,7 +1031,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1372,7 +1044,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1389,7 +1061,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Nutrition
                                             Essentials for Healthy Living</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1425,7 +1097,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1444,7 +1116,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1461,7 +1133,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Digital Marketing</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1497,7 +1169,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1511,7 +1183,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1528,7 +1200,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Python Programming</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1564,7 +1236,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1577,7 +1249,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1594,7 +1266,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Photography Masterclass</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1630,7 +1302,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1643,7 +1315,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1660,7 +1332,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Spanish
                                             Language Mastery: Beginner to Fluent</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1696,7 +1368,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1709,7 +1381,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1726,7 +1398,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Financial
                                             Planning for Millennials</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1762,7 +1434,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1775,7 +1447,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1792,7 +1464,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Nutrition
                                             Essentials for Healthy Living</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1828,7 +1500,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1847,7 +1519,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1864,7 +1536,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Digital Marketing</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1900,7 +1572,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1914,7 +1586,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1931,7 +1603,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Python Programming</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -1967,7 +1639,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -1980,7 +1652,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -1997,7 +1669,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Photography Masterclass</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2033,7 +1705,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2046,7 +1718,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2063,7 +1735,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Spanish
                                             Language Mastery: Beginner to Fluent</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2099,7 +1771,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2112,7 +1784,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2129,7 +1801,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Financial
                                             Planning for Millennials</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2165,7 +1837,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2178,7 +1850,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2195,7 +1867,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Nutrition
                                             Essentials for Healthy Living</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2231,7 +1903,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2250,7 +1922,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img1.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2267,7 +1939,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Digital Marketing</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2303,7 +1975,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2317,7 +1989,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img2.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2334,7 +2006,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Python Programming</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2370,7 +2042,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$499</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2383,7 +2055,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img3.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2400,7 +2072,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Introduction
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Introduction
                                             to Photography Masterclass</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2436,7 +2108,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$457</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2449,7 +2121,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="200">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img4.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2466,7 +2138,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Spanish
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Spanish
                                             Language Mastery: Beginner to Fluent</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2502,7 +2174,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$148</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2515,7 +2187,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="400">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img5.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2532,7 +2204,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Financial
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Financial
                                             Planning for Millennials</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2568,7 +2240,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$546</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2581,7 +2253,7 @@
                     <div class="col-lg-4 col-sm-6 wow fadeInUp" data-aos="fade-up" data-aos-duration="600">
                         <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
                             <div class="course-item__thumb rounded-12 overflow-hidden position-relative">
-                                <a [routerLink]="['course-details.html']" class="w-100 h-100">
+                                <a [routerLink]="['/course-details']" class="w-100 h-100">
                                     <img src="assets/images/thumbs/course-img6.png" alt="Course Image"
                                         class="course-item__img rounded-12 cover-img transition-2">
                                 </a>
@@ -2598,7 +2270,7 @@
                             <div class="course-item__content">
                                 <div class="">
                                     <h4 class="mb-28">
-                                        <a [routerLink]="['course-details.html']" class="link text-line-2">Nutrition
+                                        <a [routerLink]="['/course-details']" class="link text-line-2">Nutrition
                                             Essentials for Healthy Living</a>
                                     </h4>
                                     <div class="flex-between gap-8 flex-wrap mb-16">
@@ -2634,7 +2306,7 @@
                                 <div
                                     class="flex-between gap-8 pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
                                     <h4 class="mb-0 text-main-two-600">$345</h4>
-                                    <a [routerLink]="['apply-admission.html']"
+                                    <a [routerLink]="['/apply-admission']"
                                         class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
                                         tabindex="0">
                                         Enroll Now
@@ -2738,7 +2410,7 @@
 
                         <div class="flex-align flex-wrap gap-32 pt-40 border-top border-neutral-50 mt-40 border-dashed border-0"
                             data-aos="fade-left" data-aos-duration="600">
-                            <a [routerLink]="['course.html']" class="btn btn-main rounded-pill flex-align gap-8">
+                            <a [routerLink]="['/course']" class="btn btn-main rounded-pill flex-align gap-8">
                                 Read More
                                 <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
                             </a>
@@ -2802,7 +2474,7 @@
                     </ul>
 
                     <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                        <a [routerLink]="['about.html']"
+                        <a [routerLink]="['/about']"
                             class="btn btn-main rounded-pill flex-align d-inline-flex gap-8">
                             Read More
                             <i class="ph-bold ph-arrow-up-right d-flex text-lg"></i>
@@ -2930,52 +2602,53 @@
 <!-- ================================= testimonials Section Start ========================================= -->
 
 <section class="testimonials py-120 position-relative z-1 bg-main-25">
-  <img src="assets/images/shapes/shape2.png" class="shape six animation-scalation" alt="">
-  <img src="assets/images/shapes/shape3.png" class="shape four animation-rotation" alt="">
+    <img src="assets/images/shapes/shape2.png" class="shape six animation-scalation" alt="">
+    <img src="assets/images/shapes/shape3.png" class="shape four animation-rotation" alt="">
 
-  <div class="container">
-    <div class="testimonials__content">
-      <ngx-slick-carousel class="testimonials__slider" [config]="testimonialSliderConfig">
-        <div ngxSlickItem *ngFor="let testimonial of testimonials" class="slide">
-          <div class="row gy-5 align-items-center">
-            <div class="col-lg-6">
-              <div class="testimonials__thumbs-slider pe-lg-5 me-xxl-5 testimonials__thumbs wow bounceIn">
-                <img [src]="testimonial.image" alt="">
-              </div>
-            </div>
+    <div class="container">
+        <div class="testimonials__content">
+            <ngx-slick-carousel class="testimonials__slider" [config]="testimonialSliderConfig">
+                <div ngxSlickItem *ngFor="let testimonial of testimonials" class="slide">
+                    <div class="row gy-5 align-items-center">
+                        <div class="col-lg-6">
+                            <div class="testimonials__thumbs-slider pe-lg-5 me-xxl-5 testimonials__thumbs wow bounceIn">
+                                <img [src]="testimonial.image" alt="">
+                            </div>
+                        </div>
 
-            <div class="col-lg-6">
-              <div class="section-heading style-left">
-                <div class="flex-align gap-8 mb-16 wow bounceInDown">
-                  <span class="w-8 h-8 bg-main-600 rounded-circle"></span>
-                  <h5 class="text-main-600 mb-0">What Our Students Say</h5>
+                        <div class="col-lg-6">
+                            <div class="section-heading style-left">
+                                <div class="flex-align gap-8 mb-16 wow bounceInDown">
+                                    <span class="w-8 h-8 bg-main-600 rounded-circle"></span>
+                                    <h5 class="text-main-600 mb-0">What Our Students Say</h5>
+                                </div>
+                                <h2 class="mb-24 wow bounceIn">Testimonials from Happy Learners for EduAll</h2>
+                                <p class="text-neutral-500 text-line-2 wow bounceInUp">
+                                    16+ million Students are already learning on EduAll Platform
+                                </p>
+                            </div>
+
+                            <div class="testimonials-item">
+                                <ul class="flex-align gap-8 mb-16">
+                                    <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
+                                    <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
+                                    <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
+                                    <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
+                                    <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star-half"></i>
+                                    </li>
+                                </ul>
+                                <p class="text-neutral-700">
+                                    "{{ testimonial.message }}"
+                                </p>
+                                <h4 class="mt-48 mb-8">{{ testimonial.name }}</h4>
+                                <span class="text-neutral-700">{{ testimonial.role }}</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="mb-24 wow bounceIn">Testimonials from Happy Learners for EduAll</h2>
-                <p class="text-neutral-500 text-line-2 wow bounceInUp">
-                  16+ million Students are already learning on EduAll Platform
-                </p>
-              </div>
-
-              <div class="testimonials-item">
-                <ul class="flex-align gap-8 mb-16">
-                  <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
-                  <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
-                  <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
-                  <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star"></i></li>
-                  <li class="text-warning-600 text-xl d-flex"><i class="ph-fill ph-star-half"></i></li>
-                </ul>
-                <p class="text-neutral-700">
-                  "{{ testimonial.message }}"
-                </p>
-                <h4 class="mt-48 mb-8">{{ testimonial.name }}</h4>
-                <span class="text-neutral-700">{{ testimonial.role }}</span>
-              </div>
-            </div>
-          </div>
+            </ngx-slick-carousel>
         </div>
-      </ngx-slick-carousel>
     </div>
-  </div>
 </section>
 
 
@@ -2990,42 +2663,52 @@
     <div class="container">
         <div class="section-heading text-center">
             <h2 class="mb-24 wow bounceIn">Recent Articles</h2>
-            <p class="wow bounceInUp">Consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et dolore magna aliqua enim ad...</p>
+            <p class="wow bounceInUp">Consectetur adipisicing elit, sed do eiusmod tempor inc idid unt ut labore et
+                dolore magna aliqua enim ad...</p>
         </div>
         <div class="row gy-4">
-            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200" >
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="200">
                 <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
                     <div class="rounded-12 overflow-hidden position-relative">
-                        <a href="blog-details.html" class="w-100 h-100">
-                            <img src="assets/images/thumbs/blog-img1.png" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                        <a href="blog-details" class="w-100 h-100">
+                            <img src="assets/images/thumbs/blog-img1.png" alt="Blog Image"
+                                class="scale-hover-item__img rounded-12 cover-img transition-2">
                         </a>
                     </div>
                     <div class="p-24 pt-32">
                         <div class="">
-                            <span class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Student life</span>
+                            <span class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Student
+                                life</span>
                             <h4 class="mb-28">
-                                <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                <a href="blog-details" class="link text-line-2">The Importance of Diversity in
+                                    Higher Education</a>
                             </h4>
                             <div class="flex-align gap-14 flex-wrap my-20">
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-user-circle"></i></span>
                                     <span class="text-neutral-500 text-lg">Jeswal</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-calendar-dot"></i></span>
                                     <span class="text-neutral-500 text-lg">12 May, 24</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-chat-dots"></i></span>
                                     <span class="text-neutral-500 text-lg">24</span>
                                 </div>
                             </div>
-                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in
+                                the digital learning space...</p>
                         </div>
                         <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                            <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                            <a href="blog-details"
+                                class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                                tabindex="0">
                                 Read More
                                 <i class="ph ph-arrow-right"></i>
                             </a>
@@ -3033,39 +2716,47 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="400" >
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="400">
                 <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
                     <div class="rounded-12 overflow-hidden position-relative">
-                        <a href="blog-details.html" class="w-100 h-100">
-                            <img src="assets/images/thumbs/blog-img2.png" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                        <a href="blog-details" class="w-100 h-100">
+                            <img src="assets/images/thumbs/blog-img2.png" alt="Blog Image"
+                                class="scale-hover-item__img rounded-12 cover-img transition-2">
                         </a>
                     </div>
                     <div class="p-24 pt-32">
                         <div class="">
                             <span class="px-20 py-8 bg-success-600 rounded-8 text-white fw-medium mb-20">Freedom</span>
                             <h4 class="mb-28">
-                                <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                <a href="blog-details" class="link text-line-2">The Importance of Diversity in
+                                    Higher Education</a>
                             </h4>
                             <div class="flex-align gap-14 flex-wrap my-20">
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-user-circle"></i></span>
                                     <span class="text-neutral-500 text-lg">Jeswal</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-calendar-dot"></i></span>
                                     <span class="text-neutral-500 text-lg">12 May, 24</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-chat-dots"></i></span>
                                     <span class="text-neutral-500 text-lg">24</span>
                                 </div>
                             </div>
-                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in
+                                the digital learning space...</p>
                         </div>
                         <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                            <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                            <a href="blog-details"
+                                class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                                tabindex="0">
                                 Read More
                                 <i class="ph ph-arrow-right"></i>
                             </a>
@@ -3073,39 +2764,47 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="600" >
+            <div class="col-lg-4 col-sm-6" data-aos="fade-up" data-aos-duration="600">
                 <div class="blog-item scale-hover-item bg-main-25 rounded-16 p-12 h-100 border border-neutral-30">
                     <div class="rounded-12 overflow-hidden position-relative">
-                        <a href="blog-details.html" class="w-100 h-100">
-                            <img src="assets/images/thumbs/blog-img3.png" alt="Blog Image" class="scale-hover-item__img rounded-12 cover-img transition-2">
+                        <a href="blog-details" class="w-100 h-100">
+                            <img src="assets/images/thumbs/blog-img3.png" alt="Blog Image"
+                                class="scale-hover-item__img rounded-12 cover-img transition-2">
                         </a>
                     </div>
                     <div class="p-24 pt-32">
                         <div class="">
                             <span class="px-20 py-8 bg-main-two-600 rounded-8 text-white fw-medium mb-20">Online</span>
                             <h4 class="mb-28">
-                                <a href="blog-details.html" class="link text-line-2">The Importance of Diversity in Higher Education</a>
+                                <a href="blog-details" class="link text-line-2">The Importance of Diversity in
+                                    Higher Education</a>
                             </h4>
                             <div class="flex-align gap-14 flex-wrap my-20">
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-user-circle"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-user-circle"></i></span>
                                     <span class="text-neutral-500 text-lg">Jeswal</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-calendar-dot"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-calendar-dot"></i></span>
                                     <span class="text-neutral-500 text-lg">12 May, 24</span>
                                 </div>
                                 <span class="w-8 h-8 bg-neutral-100 rounded-circle"></span>
                                 <div class="flex-align gap-8">
-                                    <span class="text-neutral-500 text-2xl d-flex"><i class="ph ph-chat-dots"></i></span>
+                                    <span class="text-neutral-500 text-2xl d-flex"><i
+                                            class="ph ph-chat-dots"></i></span>
                                     <span class="text-neutral-500 text-lg">24</span>
                                 </div>
                             </div>
-                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in the digital learning space...</p>
+                            <p class="text-neutral-500 text-line-2">Unlock the secrets to effective time management in
+                                the digital learning space...</p>
                         </div>
                         <div class="pt-24 border-top border-neutral-50 mt-28 border-dashed border-0">
-                            <a href="blog-details.html" class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold" tabindex="0">
+                            <a href="blog-details"
+                                class="flex-align gap-8 text-main-600 hover-text-decoration-underline transition-1 fw-semibold"
+                                tabindex="0">
                                 Read More
                                 <i class="ph ph-arrow-right"></i>
                             </a>
