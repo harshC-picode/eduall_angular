@@ -17,49 +17,49 @@
         <div class="student-dashbord-scrollbar min-w-max pb-80">
             <span class="text-neutral-500 fw-normal text-14 mb-8">Welcome Williamson,</span>
             <ul>
-                <li class="mb-8"  >
-                    <a [routerLink]="['/instructor-dashboard']" routerLinkActive="active"
+                <li class="mb-8" routerLinkActive="activePage"  >
+                    <a [routerLink]="['/instructor-dashboard']" 
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph-bold ph-house"></i></span>
                         Dashboard</a>
                 </li>
-                <li class="mb-8">
-                    <a [routerLink]="['/instructor-dashboard-my-profile']" routerLinkActive="active"
+                <li class="mb-8"  routerLinkActive="activePage">
+                    <a [routerLink]="['/instructor-dashboard-my-profile']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph ph-user-circle"></i></span>
                         My Profile</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-message']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph ph-chat-dots"></i></span>
                         Message</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-enrolled-courses']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph ph-watch"></i></span>
                         Enrolled Courses</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-wishlist']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph ph-bookmark-simple"></i></span>
                         Wishlist</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-reviews']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i
                                 class="ph ph-sparkle"></i></span>
                         Reviews</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-my-quiz-attempts']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03">
@@ -67,7 +67,7 @@
                         </span>
                         My Quiz Attempts</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-order-history']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03">
@@ -78,7 +78,7 @@
 
                 <li class="text-neutral-500 fw-normal text-14 mb-8 mt-8">Instructor</li>
 
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-my-courses']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03">
@@ -86,7 +86,7 @@
                         </span>
                         My Courses</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-announcements']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
@@ -94,7 +94,7 @@
                         </span>
                         Announcements</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-assignment']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
@@ -102,7 +102,7 @@
                         </span>
                         Assignments</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-quiz-attempts']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03 transform-scale-x--1px">
@@ -110,7 +110,7 @@
                         </span>
                         Quiz Attempts</a>
                 </li>
-                <li class="mb-8" routerLinkActive="active">
+                <li class="mb-8" routerLinkActive="activePage">
                     <a [routerLink]="['/instructor-dashboard-account-settings']"
                         class="fw-medium d-flex align-items-center text-14 gap-8 text-neutral-500 hover-bg-main-600 px-24 py-10 hover-text-white rounded-12 item-hover flex-wrap">
                         <span class="text-16 text-main-600 item-hover__text transition-03"><i

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { NgIf, NgFor, NgClass } from '@angular/common'; // ✅ Import NgClass here
 import { CategoryDropdown2Component } from '../../shared/category-dropdown2/category-dropdown2.component';
@@ -10,7 +10,7 @@ import { Select2Data } from 'ng-select2-component';
 
 @Component({
   selector: 'app-header3',
-  imports: [RouterLink,FormsModule,CategoryDropdown2Component,CommonModule],
+  imports: [RouterLink,FormsModule,CategoryDropdown2Component,CommonModule,RouterLinkActive],
   templateUrl: './header3.component.html',
   styleUrl: './header3.component.scss'
 })
