@@ -594,30 +594,25 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr *ngFor="let project of projectRatings"
-                                                        class="hover-bg-neutral-20 border-bottom transition-03">
-                                                        <td class="py-28 px-20 shadow-none line-height-1">
-                                                            <span class="fw-normal text-14 text-neutral-500">{{
-                                                                project.title }}</span>
-                                                        </td>
-                                                        <td
-                                                            class="text-14 fw-normal py-28 px-20 shadow-none line-height-1">
-                                                            <ul class="d-flex align-items-center gap-6">
-                                                                <li *ngFor="let star of project.stars"
-                                                                    class="text-20 text-warning-600">
-                                                                    <i [ngClass]="{
-            'ph-fill ph-star': star === 'full',
-            'ph-fill ph-star-half': star === 'half'
-          }"></i>
-                                                                </li>
-                                                            </ul>
-                                                        </td>
-                                                        <td
-                                                            class="py-28 px-20 shadow-none line-height-1 fw-normal text-14 text-neutral-500">
-                                                            {{ project.totalReviews }}
-                                                        </td>
-                                                    </tr>
-                                                </tbody>
+  <tr *ngFor="let project of projectRatings"
+      class="hover-bg-neutral-20 border-bottom transition-03">
+    <td class="py-28 px-20 shadow-none line-height-1">
+      <span class="fw-normal text-14 text-neutral-500">{{ project.title }}</span>
+    </td>
+    <td class="text-14 fw-normal py-28 px-20 shadow-none line-height-1">
+      <ul class="d-flex align-items-center gap-6">
+        <li *ngFor="let i of [1,2,3,4]" class="text-20 text-warning-600"><i
+                                                            class="ph-fill ph-star"></i></li>
+                                                    <li class="text-20 text-warning-600"><i
+                                                            class="ph-fill ph-star-half"></i></li>
+      </ul>
+    </td>
+    <td class="py-28 px-20 shadow-none line-height-1 fw-normal text-14 text-neutral-500">
+      {{ project.totalReviews }}
+    </td>
+  </tr>
+</tbody>
+
 
                                             </table>
                                         </div>

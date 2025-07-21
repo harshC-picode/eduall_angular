@@ -198,62 +198,62 @@ notificationItem = [
 projectRatings = [
   {
     title: 'Automation System',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 8
   },
   {
     title: 'Laboratory Expansion',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 13
   },
   {
     title: 'Cleanroom Upgrade',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 24
   },
   {
     title: 'Quality Control',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 30
   },
   {
     title: 'Analytical Equipment',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 11
   },
   {
     title: 'Vaccine Development',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 33
   },
   {
     title: 'Packaging Line',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 40
   },
   {
     title: 'IT Infrastructure',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 14
   },
   {
     title: 'Clinical Trials',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 36
   },
   {
     title: 'Clinical Trials',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 17
   },
   {
     title: 'Cold Chain',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 22
   },
   {
     title: 'IT Infrastructure',
-    stars: ['full', 'full', 'full', 'full', 'half'],
+    rating:4.5,
     totalReviews: 3
   }
 
