@@ -4,7 +4,8 @@
             <div class="student-overlay-sidebar"></div>
 
             <!-- ========Dashdord Sidebar start======== -->
-                       <app-instructor-sidebar class="student-dashboard-sidebar px-20 py-24 max-w-288-px bg-white rounded-10 w-100 h-100 position-relative"></app-instructor-sidebar>
+            <app-instructor-sidebar
+                class="student-dashboard-sidebar px-20 py-24 max-w-288-px bg-white rounded-10 w-100 h-100 position-relative"></app-instructor-sidebar>
 
             <!-- ========Dashdord Sidebar end======== -->
 
@@ -182,7 +183,7 @@
                             <!-- progress Courses start  -->
                             <div class="row gy-4">
 
-                                 <div class="col-xl-4 col-md-6 col-sm-6 wow fadeInUp"
+                                <div class="col-xl-4 col-md-6 col-sm-6 wow fadeInUp"
                                     *ngFor="let course of dashboardCourses; let i = index" [attr.data-aos]="'fade-up'"
                                     [attr.data-aos-duration]="course.aosDuration">
                                     <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">
@@ -298,7 +299,7 @@
                             <!-- progress Courses start  -->
                             <div class="row gy-4">
 
-                                 <div class="col-xl-4 col-md-6 col-sm-6 wow fadeInUp"
+                                <div class="col-xl-4 col-md-6 col-sm-6 wow fadeInUp"
                                     *ngFor="let course of dashboardCourses; let i = index" [attr.data-aos]="'fade-up'"
                                     [attr.data-aos-duration]="course.aosDuration">
                                     <div class="course-item bg-white rounded-16 p-12 h-100 box-shadow-md">

@@ -1,5 +1,3 @@
-
-
 import {
   Component,
   AfterViewInit,
@@ -9,7 +7,7 @@ import {
   ApplicationRef,
 } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
-import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
+import { RouterOutlet, Router, NavigationEnd, NavigationStart } from '@angular/router';
 
 // Declare global JS libraries
 declare var AOS: any;
@@ -23,17 +21,25 @@ declare var WOW: any;
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
+  isLoading = true;
+
   constructor(
     private appRef: ApplicationRef,
     private ngZone: NgZone,
     private router: Router,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    // Scroll to top on navigation
     if (isPlatformBrowser(this.platformId)) {
       this.router.events.subscribe((event) => {
+        if (event instanceof NavigationStart) {
+          this.isLoading = true;
+        }
+
         if (event instanceof NavigationEnd) {
           window.scrollTo(0, 0);
+          setTimeout(() => {
+            this.isLoading = false;
+          }, 500);
         }
       });
     }
@@ -55,7 +61,7 @@ export class AppComponent implements AfterViewInit {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         setTimeout(() => {
-          AOS.refresh(); // Re-initialize AOS
+          AOS.refresh();
           if (typeof WOW === 'function') {
             const wow = new WOW({ live: false });
             wow.init();
@@ -63,6 +69,11 @@ export class AppComponent implements AfterViewInit {
         }, 500);
       }
     });
+
+    // Hide preloader after initial load
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 1500);
   }
 
   private async initWOW() {
