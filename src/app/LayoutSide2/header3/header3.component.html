@@ -1,3 +1,426 @@
+
+<div class="mobile-menu scroll-sm d-lg-none d-block" [ngClass]="{ 'active': isMobileMenuActive }">
+    <button type="button" class="close-button" (click)="closeMobileMenu()"> <i class="ph ph-x"></i> </button>
+    <div class="mobile-menu__inner">
+        <a [routerLink]="['/']" class="mobile-menu__logo">
+            <img src="assets/images/logo/logo.png" alt="Logo">
+        </a>
+        <div class="mobile-menu__menu">
+            <!-- Nav Menu Start -->
+            <ul class="nav-menu flex-align nav-menu--mobile">
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    >
+                    <a href="javascript:void(0)" class="nav-menu__link" (click)="toggleSubmenu('home')">Home</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'home' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home LMS
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-2']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home Online Course
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-3']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home University
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-4']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home Tutor
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-5']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home Kindergarten
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-6']" class="nav-submenu__link hover-bg-neutral-30">
+                                Home Kindergarten Kids
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    >
+                    <a href="javascript:void(0)" (click)="toggleSubmenu('courses')" class="nav-menu__link text-heading-two">Courses</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'courses' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/course']" class="nav-submenu__link hover-bg-neutral-30">
+                                Course Grid View
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/course-list-view']" class="nav-submenu__link hover-bg-neutral-30">
+                                Course List View
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/course-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Course Details
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    >
+                    <a href="javascript:void(0)" (click)="toggleSubmenu('pages')" class="nav-menu__link text-heading-two">Pages</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'pages' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/about']" class="nav-submenu__link hover-bg-neutral-30">
+                                About
+                            </a>
+                        </li>
+
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/about-two']" class="nav-submenu__link hover-bg-neutral-30">
+                                About Two
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/about-three']" class="nav-submenu__link hover-bg-neutral-30">
+                                About Three
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/about-four']" class="nav-submenu__link hover-bg-neutral-30">
+                                AboutFour
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/Pricing-plan']" class="nav-submenu__link hover-bg-neutral-30">
+                                Pricing Plan
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor']" class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-two']" class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Two
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Details
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/tutor']" class="nav-submenu__link hover-bg-neutral-30">
+                                Premium Tutors
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/tutor-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Premium Tutors Details
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/faq']" class="nav-submenu__link hover-bg-neutral-30">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/tuition-jobs']" class="nav-submenu__link hover-bg-neutral-30">
+                                Tuition Jobs
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/events']" class="nav-submenu__link hover-bg-neutral-30">
+                                Events
+                            </a>
+                        </li>
+
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/event-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Events Details
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/apply-admission']" class="nav-submenu__link hover-bg-neutral-30">
+                                Apply Admission
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/gallery']" class="nav-submenu__link hover-bg-neutral-30">
+                                Gallery
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/privacy-policy']" class="nav-submenu__link hover-bg-neutral-30">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/favorite-course']" class="nav-submenu__link hover-bg-neutral-30">
+                                Favorite Course
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/find-tutors']" class="nav-submenu__link hover-bg-neutral-30">
+                                Find Best Tutors
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/book-online-class']" class="nav-submenu__link hover-bg-neutral-30">
+                                Book Online Class
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    (click)="toggleSubmenu('dashboard')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Dashboard</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'dashboard' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/admin-dashbord']" class="nav-submenu__link hover-bg-neutral-30">
+                                Admin Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/my-profile']" class="nav-submenu__link hover-bg-neutral-30">
+                                My Profile
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/dashbord-message']" class="nav-submenu__link hover-bg-neutral-30">
+                                Message
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/dashbord-courses']" class="nav-submenu__link hover-bg-neutral-30">
+                                Courses
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/dashbord-wishlist']" class="nav-submenu__link hover-bg-neutral-30">
+                                Wishlist
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/deshbord-reviews']" class="nav-submenu__link hover-bg-neutral-30">
+                                Reviews
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/dashbord-quiz-attempts']" class="nav-submenu__link hover-bg-neutral-30">
+                                Quiz Attempts
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/dashbord-settings']" class="nav-submenu__link hover-bg-neutral-30">
+                                Settings
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord']" class="nav-submenu__link hover-bg-neutral-30">
+                                Student Admin Dashbord
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-my-profile']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student My Profile
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-message']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Message
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-enrolled-courses']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Enrolled Courses
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-wishlist']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Wishlist
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-reviews']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Reviews
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-my-quiz-attempts']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student My Quiz Attempts
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-assignment']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Assignment
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/student-dashbord-settings']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Student Settings
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard']" class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Dashbord
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-my-profile']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor My Profile
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-message']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Message
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-enrolled-courses']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Enrolled Courses
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-wishlist']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Wishlist
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-reviews']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Reviews
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-my-quiz-attempts']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor My Quiz Attempts
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-order-history']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Order History
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-my-courses']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor My Courses
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-announcements']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Announcements
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-assignment']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Assignment
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-quiz-attempts']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Quiz Attempts
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/instructor-dashboard-account-settings']"
+                                class="nav-submenu__link hover-bg-neutral-30">
+                                Instructor Account Settings
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    (click)="toggleSubmenu('product')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Product</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'product' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/product']" class="nav-submenu__link hover-bg-neutral-30">
+                                Product
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/product-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Product Details
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/cart']" class="nav-submenu__link hover-bg-neutral-30">
+                                Cart
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/checkout']" class="nav-submenu__link hover-bg-neutral-30">
+                                Checkout
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="nav-menu__item has-submenu activePage" routerLinkActive="activePage"
+                    (click)="toggleSubmenu('blog')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Blog</a>
+                    <ul class="nav-submenu scroll-sm" [style.display]="activeIndex === 'blog' ? 'block' : 'none'">
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/blog']" class="nav-submenu__link hover-bg-neutral-30">
+                                Blog Grid
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/blog-list']" class="nav-submenu__link hover-bg-neutral-30">
+                                Blog List
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/blog-classic']" class="nav-submenu__link hover-bg-neutral-30">
+                                Blog Classic
+                            </a>
+                        </li>
+                        <li class="nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/blog-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                Blog Details
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </li>
+                <li class="nav-menu__item">
+                    <a [routerLink]="['/contact']" class="nav-menu__link">Contact</a>
+                </li>
+            </ul>
+            <!-- Nav Menu End -->
+        </div>
+    </div>
+</div>
 <!-- ==================== Header Start Here ==================== -->
 <header class="header bg-neutral-900">
     <div class="container container--xl">
@@ -11,7 +434,7 @@
                 <!-- Logo End  -->
 
                 <!-- Select Start -->
-<app-category-dropdown2></app-category-dropdown2>
+                <app-category-dropdown2></app-category-dropdown2>
                 <!-- Select End -->
 
                 <!-- Menu Start  -->
@@ -143,8 +566,8 @@
                                         class="nav-submenu__link hover-bg-neutral-30">Favorite Course</a>
                                 </li>
                                 <li class="nav-submenu__item">
-                                    <a [routerLink]="['find-tutors']"
-                                        class="nav-submenu__link hover-bg-neutral-30">Find Best Tutors</a>
+                                    <a [routerLink]="['find-tutors']" class="nav-submenu__link hover-bg-neutral-30">Find
+                                        Best Tutors</a>
                                 </li>
                                 <li class="nav-submenu__item">
                                     <a [routerLink]="['book-online-class']"
@@ -187,7 +610,7 @@
                                     <a [routerLink]="['dashbord-settings']"
                                         class="nav-submenu__link hover-bg-neutral-30">Settings</a>
                                 </li>
-                                <li class="nav-submenu__item"  routerLinkActive="activePage">
+                                <li class="nav-submenu__item" routerLinkActive="activePage">
                                     <a [routerLink]="['student-dashbord']"
                                         class="nav-submenu__link hover-bg-neutral-30">Student Admin Dashbord</a>
                                 </li>
@@ -285,8 +708,8 @@
                                         Product</a>
                                 </li>
                                 <li class="nav-submenu__item">
-                                    <a [routerLink]="['product-details']"
-                                        class="nav-submenu__link hover-bg-neutral-30"> Product Details</a>
+                                    <a [routerLink]="['product-details']" class="nav-submenu__link hover-bg-neutral-30">
+                                        Product Details</a>
                                 </li>
                                 <li class="nav-submenu__item">
                                     <a [routerLink]="['cart']" class="nav-submenu__link hover-bg-neutral-30">Cart</a>
@@ -432,9 +855,11 @@
                         </li>
                     </ul>
                 </div>
-                <button type="button" class="toggle-mobileMenu d-lg-none text-white flex-center">
-                    <i class="ph ph-list"></i>
+                <!-- Hamburger Icon -->
+                 <button type="button" class="toggle-mobileMenu d-lg-none text-neutral-200 flex-center"
+                    (click)="toggleMobileMenu()"><i class="ph ph-list"></i>
                 </button>
+
             </div>
             <!-- Header Right End  -->
         </nav>

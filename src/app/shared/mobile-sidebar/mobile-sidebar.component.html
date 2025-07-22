@@ -1,0 +1,213 @@
+<div class="mobile-menu scroll-sm d-lg-none d-block" [ngClass]="{ 'active': isMobileMenuActive }">
+    <button type="button" class="close-button" (click)="closeMobileMenu()"> <i class="ph ph-x"></i> </button>
+    <div class="mobile-menu__inner">
+        <a [routerLink]="['/']" class="mobile-menu__logo">
+            <img src="assets/images1/logo/logo.png" alt="Logo">
+        </a>
+        <div class="mobile-menu__menu">
+            <!-- Nav Menu Start -->
+            <ul class="nav-menu flex-align nav-menu--mobile">
+                <li class="on-hover-item nav-menu__item has-submenu" routerLinkActive="activePage"
+                    (click)="toggleSubmenu('home')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Home</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm"
+                        [style.display]="activeIndex === 'home' ? 'block' : 'none'">
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Home Grocery
+                            </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-two']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Home Electronics
+                            </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/index-three']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Home Fashion
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="on-hover-item nav-menu__item has-submenu" routerLinkActive="activePage"
+                    (click)="toggleSubmenu('shop')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Shop</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm"
+                        [style.display]="activeIndex === 'shop' ? 'block' : 'none'">
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/shop']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop
+                            </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/product-details']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop Details
+                            </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" routerLinkActive="activePage">
+                            <a [routerLink]="['/product-details-two']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop Details Two
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Pages Dropdown -->
+                <li class="on-hover-item nav-menu__item has-submenu" [routerLinkActive]="'activePage'"
+                    (click)="toggleSubmenu('pages')" [routerLinkActiveOptions]="{ exact: true }">
+                    <span class="badge-notification bg-warning-600 text-white text-sm py-2 px-8 rounded-4">New</span>
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Pages</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm"
+                        [style.display]="activeIndex === 'pages' ? 'block' : 'none'">
+
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/cart']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Cart
+                            </a>
+                        </li>
+
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/wishlist']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Wishlist
+                            </a>
+                        </li>
+
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/checkout']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Checkout
+                            </a>
+                        </li>
+
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/become-seller']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Become Seller
+                            </a>
+                        </li>
+
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'"
+                            [routerLinkActiveOptions]="{ exact: true }">
+                            <a [routerLink]="['/account']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Account
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <!-- <li class="on-hover-item nav-menu__item has-submenu">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Shop</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm">
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['shop']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['product-details']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop Details</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['product-details-two']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Shop Details Two</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- <li class="on-hover-item nav-menu__item has-submenu">
+                    <span class="badge-notification bg-warning-600 text-white text-sm py-2 px-8 rounded-4">New</span>
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Pages</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm">
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['cart']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Cart</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['wishlist']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Wishlist</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['checkout']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Checkout </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['become-seller']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Become Seller</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item">
+                            <a [routerLink]="['account']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Account</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <li class="on-hover-item nav-menu__item has-submenu" (click)="toggleSubmenu('vendor')">
+                    <span class="badge-notification bg-tertiary-600 text-white text-sm py-2 px-8 rounded-4">New</span>
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Vendors</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm"
+                        [style.display]="activeIndex === 'vendor' ? 'block' : 'none'">
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['vendor']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Vendors </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['vendor-details']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Vendor Details </a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['vendor-two']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Vendors Two</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['vendor-two-details']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Vendors Two Details</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="on-hover-item nav-menu__item has-submenu" (click)="toggleSubmenu('blog')">
+                    <a href="javascript:void(0)" class="nav-menu__link text-heading-two">Blog</a>
+                    <ul class="on-hover-dropdown common-dropdown nav-submenu scroll-sm"
+                        [style.display]="activeIndex === 'blog' ? 'block' : 'none'">
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['blog']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Blog</a>
+                        </li>
+                        <li class="common-dropdown__item nav-submenu__item" [routerLinkActive]="'activePage'">
+                            <a [routerLink]="['blog-details']"
+                                class="common-dropdown__link nav-submenu__link text-heading-two hover-bg-neutral-100">
+                                Blog Details</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-menu__item" [routerLinkActive]="'activePage'" (click)="toggleSubmenu('contact')">
+                    <a [routerLink]="['contact']" class="nav-menu__link text-heading-two">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Nav Menu End -->
+        </div>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/instructor-sidebar.component';
 
+
 @Component({
   selector: 'app-instructor-dashboard',
   imports: [RouterLink,CommonModule,InstructorSidebarComponent],
@@ -10,6 +11,8 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard.component.scss'
 })
 export class InstructorDashboardComponent {
+
+ 
 dashboardCards = [
   {
     label: 'All Courses',

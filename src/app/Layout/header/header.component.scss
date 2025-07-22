@@ -1,56 +1,56 @@
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #fff; // or your header color
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-.category-dropdown {
-  .dropdown-toggle-btn {
-    font-weight: 500;
-    font-size: 16px;
-    border: 1px solid #e0e0e0;
-    background-color: #9baed5;
-    color: #333;
-    cursor: pointer;
-    padding: 10px;
+// .header {
+//   position: sticky;
+//   top: 0;
+//   z-index: 1000;
+//   background-color: #fff; // or your header color
+//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+// }
+// .category-dropdown {
+//   .dropdown-toggle-btn {
+//     font-weight: 500;
+//     font-size: 16px;
+//     border: 1px solid #e0e0e0;
+//     background-color: #9baed5;
+//     color: #333;
+//     cursor: pointer;
+//     padding: 10px;
 
-    i {
-      font-size: 18px;
-    }
-  }
+//     i {
+//       font-size: 18px;
+//     }
+//   }
 
-  .dropdown-menu-custom {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 200px;
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-    z-index: 999;
-  }
+//   .dropdown-menu-custom {
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     min-width: 200px;
+//     background: #fff;
+//     border: 1px solid #ddd;
+//     border-radius: 8px;
+//     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+//     z-index: 999;
+//   }
 
-  .dropdown-title {
-    font-size: 14px;
-  }
+//   .dropdown-title {
+//     font-size: 14px;
+//   }
 
-  .dropdown-item-custom {
-    cursor: pointer;
-    transition: background-color 0.2s;
+//   .dropdown-item-custom {
+//     cursor: pointer;
+//     transition: background-color 0.2s;
 
-    &.active {
-      background-color: #0d6efd;
-      color: white;
-    }
-    &:hover {
-      background-color: rgb(176, 201, 240);
-      color: rgb(61, 72, 186);
-    }
-  }
+//     &.active {
+//       background-color: #0d6efd;
+//       color: white;
+//     }
+//     &:hover {
+//       background-color: rgb(176, 201, 240);
+//       color: rgb(61, 72, 186);
+//     }
+//   }
 
-  .max-height-150 {
-    max-height: 250px;
-  }
-}
+//   .max-height-150 {
+//     max-height: 250px;
+//   }
+// }

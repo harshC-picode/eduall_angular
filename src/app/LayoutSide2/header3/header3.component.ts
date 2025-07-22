@@ -1,59 +1,119 @@
-import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
-import { FormsModule } from '@angular/forms';
-import { NgIf, NgFor, NgClass } from '@angular/common'; // ✅ Import NgClass here
-import { CategoryDropdown2Component } from '../../shared/category-dropdown2/category-dropdown2.component';
-import {  Inject, PLATFORM_ID } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { Select2Data } from 'ng-select2-component';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  Inject,
+  OnInit,
+  ViewChild,
+  PLATFORM_ID,
+  AfterViewInit,
+  OnDestroy
+} from '@angular/core';
+import { RouterLink, RouterLinkActive, Router, NavigationStart } from '@angular/router'; // ✅ Added NavigationStart
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgIf, NgFor, NgClass, CommonModule, isPlatformBrowser } from '@angular/common'; // ✅ Structured imports
 
+import { MobileSidebarComponent } from '../../shared/mobile-sidebar/mobile-sidebar.component';
+
+import { Select2, Select2Data } from 'ng-select2-component';
+import { Subscription } from 'rxjs'; // ✅ Added Subscription
+import { CategoryDropdown2Component } from '../../shared/category-dropdown2/category-dropdown2.component';
+
+declare var $: any;
 
 @Component({
-  selector: 'app-header3',
-  imports: [RouterLink,FormsModule,CategoryDropdown2Component,CommonModule,RouterLinkActive],
-  templateUrl: './header3.component.html',
-  styleUrl: './header3.component.scss'
+  selector: 'app-header3',
+  standalone: true,
+  imports: [
+    RouterLink,
+    FormsModule,
+    ReactiveFormsModule,
+    CategoryDropdown2Component,
+    MobileSidebarComponent,
+    RouterLinkActive,
+    NgClass,
+    NgFor,
+    NgIf
+  ],
+  templateUrl: './header3.component.html',
+  styleUrl: './header3.component.scss'
 })
-export class Header3Component {
-//  dropdownOpen = false;
-//   selectedCategory = 'Design';
-//   categories = [
-//     'Design', 'Development', 'Architecture',
-//     'Life Style', 'Data Science', 'Marketing',
-//     'Music', 'Typography', 'Finance', 'Motivation'
-//   ];
+export class Header3Component implements OnDestroy { // ✅ Implement OnDestroy
 
-//   toggleDropdown() {
-//     this.dropdownOpen = !this.dropdownOpen;
-//   }
+  isActiveProgress: boolean = false;
+  private pathLength!: number;
 
-//   selectCategory(category: string) {
-//     this.selectedCategory = category;
-//     this.dropdownOpen = false;
-//   }
-//   searchText: string = ''; 
+  activeIndex: any | null = null;
+  windowWidth: number = 0;
+  isBrowser: boolean = false;
 
-isBrowser: boolean = false;
+  selectedCategory: string = '';
+  searchTerm: string = '';
+  isHomePageActive: boolean = false;
+  categoryDropdownVisible = false;
+  isActive = false;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    this.isBrowser = isPlatformBrowser(platformId);
-  }
+  isMobileMenuActive: boolean = false;
+  activeDropdown: string | null = null;
 
-  categories: Select2Data = [
-    { value: '', label: 'Categories' },
-    { value: '1', label: 'Design' },
-    { value: '2', label: 'Development' },
-    { value: '3', label: 'Architecture' },
-    { value: '4', label: 'Life Style' },
-    { value: '5', label: 'Data Science' },
-    { value: '6', label: 'Marketing' },
-    { value: '7', label: 'Music' },
-    { value: '8', label: 'Typography' },
-    { value: '9', label: 'Finance' },
-    { value: '10', label: 'Motivation' }
-  ];
+  private routerSub!: Subscription; // ✅ Track subscription
 
-  
-  
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private router: Router
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+    if (this.isBrowser) {
+      this.windowWidth = window.innerWidth;
+    }
 
+    // ✅ Auto-close sidebar on route change
+    this.routerSub = this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.closeMobileMenu();
+      }
+    });
+  }
+
+  // ✅ Clean up subscription
+  ngOnDestroy(): void {
+    if (this.routerSub) {
+      this.routerSub.unsubscribe();
+    }
+  }
+
+  toggleMobileMenu() {
+    this.isMobileMenuActive = !this.isMobileMenuActive;
+
+    if (this.isMobileMenuActive) {
+      document.body.classList.add('scroll-hide-sm');
+    } else {
+      document.body.classList.remove('scroll-hide-sm');
+    }
+  }
+
+  closeMobileMenu() {
+    this.isMobileMenuActive = false;
+    document.body.classList.remove('scroll-hide-sm');
+    console.log("closed");
+  }
+
+  onResize() {
+    this.windowWidth = window.innerWidth;
+  }
+
+  toggleSubmenu(index: string) {
+    if (this.windowWidth < 992) {
+      this.activeIndex = this.activeIndex === index ? null : index;
+    }
+  }
+
+  isParentActive(routes: string[]): boolean {
+    const currentUrl = this.router.url;
+    return routes.some(route => route !== '/' ? currentUrl.startsWith(route) : currentUrl === route);
+  }
+
+  toggleDropdown(menu: string): void {
+    this.activeDropdown = this.activeDropdown === menu ? null : menu;
+  }
 }
