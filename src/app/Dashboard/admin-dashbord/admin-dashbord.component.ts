@@ -5,28 +5,25 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
 import { LineChartComponent } from '../../shared/line-chart/line-chart.component';
 import { DonutChartComponent } from '../../shared/donut-chart/donut-chart.component';
-import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
-
-
 
 
 
 @Component({
   selector: 'app-admin-dashbord',
-  imports: [CommonModule,RouterLink,DashboardSidebarComponent,LineChartComponent,DonutChartComponent,AdminNavComponent],
+  imports: [CommonModule,RouterLink,DashboardSidebarComponent,LineChartComponent,DonutChartComponent],
   templateUrl: './admin-dashbord.component.html',
   styleUrl: './admin-dashbord.component.scss'
 })
 export class AdminDashbordComponent {
-   sidebarVisible = false;
+    sidebarActive = false;
 
-  toggleSidebar(): void {
-    this.sidebarVisible = !this.sidebarVisible;
-  }
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
 
-  hideSidebar(): void {
-    this.sidebarVisible = false;
-  }
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 // reviewers-data.ts
 reviews= [
   {

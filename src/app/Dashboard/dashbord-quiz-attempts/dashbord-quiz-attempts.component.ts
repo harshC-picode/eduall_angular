@@ -2,24 +2,24 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
-import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
+
 
 @Component({
   selector: 'app-dashbord-quiz-attempts',
-  imports: [RouterLink,CommonModule,DashboardSidebarComponent,AdminNavComponent],
+  imports: [RouterLink,CommonModule,DashboardSidebarComponent],
   templateUrl: './dashbord-quiz-attempts.component.html',
   styleUrl: './dashbord-quiz-attempts.component.scss'
 })
 export class DashbordQuizAttemptsComponent {
-  sidebarVisible = false;
+    sidebarActive = false;
 
-  toggleSidebar(): void {
-    this.sidebarVisible = !this.sidebarVisible;
-  }
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
 
-  hideSidebar(): void {
-    this.sidebarVisible = false;
-  }
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 quizResults = [
   {
     title: 'Financial Planning for Millennials',

@@ -1,7 +1,5 @@
 <!-- Overlay -->
-<div class="side-overlay"
-    [ngStyle]="{ 'display': sidebarVisible ? 'block' : 'none' }"
-    (click)="hideSidebar()">
+<div class="student-overlay-sidebar" [class.show]="sidebarActive" (click)="closeSidebar()">
 </div>
 
 
@@ -10,16 +8,163 @@
 
 
         <!-- ========Dashdord Sidebar start======== -->
-            <app-dashboard-sidebar
-      [sidebarVisible]="sidebarVisible"
-      (closeSidebar)="hideSidebar()">
-    </app-dashboard-sidebar>
+<app-dashboard-sidebar [active]="sidebarActive">
+        </app-dashboard-sidebar>
         <!-- ========Dashdord Sidebar end======== -->
 
 
         <div class="dashbord-body flex-grow-1">
             <!-- =====messsage dashbord nab start======== -->
-            <app-admin-nav (toggleSidebar)="toggleSidebar()"></app-admin-nav>
+             <div class="px-24 py-16 bg-neutral-10 border-bottom border-neutral-40 w-100">
+                <div class="d-flex align-items-center justify-content-between gap-24 w-100">
+                    <div class="d-flex align-items-center gap-24">
+                        <button type="button"
+                            class="toggle-dashbord-button text-neutral-500 text-28 line-height-1 d-lg-none d-block"
+                            (click)="toggleSidebar()">
+                            <i class="ph ph-list"></i> <!-- Your hamburger icon -->
+                        </button>
+
+                        <div class="max-w-357-px position-relative d-sm-block d-none">
+                            <form action="#">
+                                <input type="text" placeholder="Search"
+                                    class="ps-16 pe-36 py-9 border border-neutral-40 rounded-pill focus-visible-outline focus-border-main-600 text-14 line-height-1">
+                                <button type="button"
+                                    class="w-28 h-28 bg-main-600 text-white text-16 rounded-circle justify-content-center align-items-center d-flex position-absolute top-50-percent translate-middle-y inset-inline-end-0-px me-4">
+                                    <i class="ph-bold ph-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-16">
+                        <a [routerLink]="['']"
+                            class="px-20 py-10 border-main-600 border rounded-pill text-14 text-main-600 hover-bg-main-600 hover-text-white hover-border-600 d-lg-block d-none line-height-1">Create
+                            a New Course</a>
+                        <div
+                            class="w-36 h-36 border-neutral-50 border rounded-pill justify-content-center align-items-center d-flex text-20 text-neutral-500 hover-bg-main-600  transition-03">
+                            <button type="button" class="hover-text-white transition-03">
+                                <i class="ph ph-translate"></i>
+                            </button>
+                        </div>
+                        <div class="position-relative">
+                            <div
+                                class="w-36 h-36 border-neutral-50 border rounded-pill justify-content-center align-items-center d-flex text-20 text-neutral-500 position-relative">
+                                <div>
+                                    <button
+                                        class="dropdown-toggle w-36 h-36 border-neutral-50 border rounded-pill hover-bg-main-600 hover-text-white transition-03"
+                                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="ph ph-bell-simple"></i>
+                                    </button>
+                                    <ul class="dropdown-menu rounded-12">
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center gap-12 px-16 py-12"
+                                                href="javascript:void(0)">
+                                                <div class="d-flex w-100 justify-content-between gap-12">
+                                                    <div class="d-flex align-items-center gap-12 ">
+                                                        <span class="w-36 h-36">
+                                                            <img src="assets/images/thumbs/reviewer-img1.png" alt="">
+                                                        </span>
+                                                        <div>
+                                                            <span class="text-md fw-semibold text-line-1">Ronald
+                                                                Richards</span>
+                                                            <p class="text-sm text-line-1 text-neutral-300">You can
+                                                                stitch between artboards</p>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm fw-medium text-neutral-400">23 Mins ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center gap-12 px-16 py-12"
+                                                href="javascript:void(0)">
+                                                <div class="d-flex w-100 justify-content-between gap-12">
+                                                    <div class="d-flex align-items-center gap-12 ">
+                                                        <span class="w-36 h-36"><img
+                                                                src="assets/images/thumbs/reviewer-img4.png"
+                                                                alt=""></span>
+                                                        <div>
+                                                            <span class="text-md fw-semibold text-line-1">Arlene
+                                                                McCoy</span>
+                                                            <p class="text-sm text-line-1 text-neutral-300">Invite you
+                                                                to prototyping</p>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm fw-medium text-neutral-400">23 Mins ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a class="dropdown-item d-flex align-items-center gap-12 px-16 py-12"
+                                                href="javascript:void(0)">
+                                                <div class="d-flex w-100 justify-content-between gap-12">
+                                                    <div class="d-flex align-items-center gap-12 ">
+                                                        <span class="w-36 h-36"><img
+                                                                src="assets/images/thumbs/instructor-details-thumb.png"
+                                                                alt=""></span>
+                                                        <div>
+                                                            <span class="text-md fw-semibold text-line-1">Annette
+                                                                Black</span>
+                                                            <p class="text-sm text-line-1 text-neutral-300">Invite you
+                                                                to prototyping</p>
+                                                        </div>
+                                                    </div>
+                                                    <span class="text-sm fw-medium text-neutral-400">23 Mins ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="position-absolute inset-inline-start-22px top--20-percent">
+                                    <span
+                                        class="bg-main-600 text-white w-16 h-16 rounded-circle text-9 d-flex justify-content-center align-items-center">2</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="w-36 h-36 border-neutral-50 border rounded-pill justify-content-center align-items-center d-flex text-20 text-neutral-500 hover-bg-main-600 transition-03">
+                            <button type="button" class=" hover-text-white transition-03">
+                                <i class="ph ph-chat-dots"></i>
+                            </button>
+                        </div>
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle w-36 h-36 border-neutral-50 border rounded-pill"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <img src="assets/images/thumbs/testimonials-three-img1.png" alt="">
+                            </button>
+                            <ul class="dropdown-menu rounded-12">
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03"
+                                        [routerLink]="['/my-profile']">
+                                        <span><i class="ph ph-user-circle"></i></span>
+                                        <span>My Profile</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03"
+                                        [routerLink]="['/dashbord-settings']">
+                                        <span><i class="ph ph-gear"></i></span>
+                                        <span>Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item d-flex align-items-center gap-12 hover-text-main-600 transition-03"
+                                        [routerLink]="['/sign-in']">
+                                        <span><i class="ph ph-power"></i></span>
+                                        <span>Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <!-- =====message nab end======== -->
             <!-- =========message profile start=========== -->
             <div class="px-24 py-24">

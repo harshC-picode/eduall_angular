@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
-import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
+
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dashbord-message',
-  imports: [RouterLink,DashboardSidebarComponent,AdminNavComponent,CommonModule],
+  imports: [RouterLink,DashboardSidebarComponent,CommonModule],
   templateUrl: './dashbord-message.component.html',
   styleUrl: './dashbord-message.component.scss'
 })
 export class DashbordMessageComponent {
- sidebarVisible = false;
+    sidebarActive = false;
 
-  toggleSidebar(): void {
-    this.sidebarVisible = !this.sidebarVisible;
-  }
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
 
-  hideSidebar(): void {
-    this.sidebarVisible = false;
-  }
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 }
