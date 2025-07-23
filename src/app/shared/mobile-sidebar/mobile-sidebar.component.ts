@@ -8,7 +8,7 @@ import { Select2, Select2Data } from 'ng-select2-component';
 @Component({
   selector: 'app-mobile-sidebar',
   standalone: true,
-  imports: [RouterLink, FormsModule, CommonModule, ReactiveFormsModule, Select2, RouterLinkActive],
+  imports: [RouterLink, FormsModule, CommonModule, ReactiveFormsModule, RouterLinkActive],
   templateUrl: './mobile-sidebar.component.html',
   styleUrls: ['./mobile-sidebar.component.scss']
 })

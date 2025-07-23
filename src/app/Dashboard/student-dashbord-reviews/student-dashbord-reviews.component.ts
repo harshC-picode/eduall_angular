@@ -10,6 +10,15 @@ import { StudentSidebarComponent } from '../../shared/student-sidebar/student-si
   styleUrl: './student-dashbord-reviews.component.scss'
 })
 export class StudentDashbordReviewsComponent {
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 reviewList = [
   {
     courseName: 'Automation System',

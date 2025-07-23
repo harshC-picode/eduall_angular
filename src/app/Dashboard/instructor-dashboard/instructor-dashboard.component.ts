@@ -11,7 +11,17 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard.component.scss'
 })
 export class InstructorDashboardComponent {
+sidebarActive = false;
 
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
  
 dashboardCards = [
   {

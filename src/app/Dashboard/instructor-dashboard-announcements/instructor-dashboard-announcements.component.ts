@@ -10,6 +10,18 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-announcements.component.scss'
 })
 export class InstructorDashboardAnnouncementsComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 tableData = [
   {
     title: 'Spring Concert Tickets On Sale Starting Today',

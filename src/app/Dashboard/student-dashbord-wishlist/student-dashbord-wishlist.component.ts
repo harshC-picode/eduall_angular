@@ -10,6 +10,15 @@ import { StudentSidebarComponent } from '../../shared/student-sidebar/student-si
   styleUrl: './student-dashbord-wishlist.component.scss'
 })
 export class StudentDashbordWishlistComponent {
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 courseList = [
   {
     image: 'assets/images/thumbs/course-img1.png',

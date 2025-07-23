@@ -28,11 +28,9 @@ declare var $: any;
     FormsModule,
     ReactiveFormsModule,
     CategoryDropdownComponent,
-    MobileSidebarComponent,
+    
     RouterLinkActive,
-    NgClass,
-    NgFor,
-    NgIf
+    NgClass
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

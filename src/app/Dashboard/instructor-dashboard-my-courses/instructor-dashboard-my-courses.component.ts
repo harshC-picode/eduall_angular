@@ -10,6 +10,18 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-my-courses.component.scss'
 })
 export class InstructorDashboardMyCoursesComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 dashboardCourses = [
   {
     image: 'assets/images/thumbs/dashbord-courses-img1.png',

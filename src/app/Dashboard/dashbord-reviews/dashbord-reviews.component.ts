@@ -2,14 +2,24 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
+import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
 
 @Component({
   selector: 'app-dashbord-reviews',
-  imports: [RouterLink,CommonModule,DashboardSidebarComponent],
+  imports: [RouterLink,CommonModule,DashboardSidebarComponent,AdminNavComponent],
   templateUrl: './dashbord-reviews.component.html',
   styleUrl: './dashbord-reviews.component.scss'
 })
 export class DashbordReviewsComponent {
+  sidebarVisible = false;
+
+  toggleSidebar(): void {
+    this.sidebarVisible = !this.sidebarVisible;
+  }
+
+  hideSidebar(): void {
+    this.sidebarVisible = false;
+  }
 projects = [
   {
     title: 'Automation System',

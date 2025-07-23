@@ -9,5 +9,15 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-account-settings.component.scss'
 })
 export class InstructorDashboardAccountSettingsComponent {
+sidebarActive = false;
 
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 }

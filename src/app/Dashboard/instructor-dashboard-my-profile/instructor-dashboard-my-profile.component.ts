@@ -9,5 +9,15 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-my-profile.component.scss'
 })
 export class InstructorDashboardMyProfileComponent {
+sidebarActive = false;
 
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 }

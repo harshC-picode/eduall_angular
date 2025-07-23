@@ -5,6 +5,7 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
 import { LineChartComponent } from '../../shared/line-chart/line-chart.component';
 import { DonutChartComponent } from '../../shared/donut-chart/donut-chart.component';
+import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
 
 
 
@@ -12,11 +13,20 @@ import { DonutChartComponent } from '../../shared/donut-chart/donut-chart.compon
 
 @Component({
   selector: 'app-admin-dashbord',
-  imports: [CommonModule,RouterLink,DashboardSidebarComponent,LineChartComponent,DonutChartComponent],
+  imports: [CommonModule,RouterLink,DashboardSidebarComponent,LineChartComponent,DonutChartComponent,AdminNavComponent],
   templateUrl: './admin-dashbord.component.html',
   styleUrl: './admin-dashbord.component.scss'
 })
 export class AdminDashbordComponent {
+   sidebarVisible = false;
+
+  toggleSidebar(): void {
+    this.sidebarVisible = !this.sidebarVisible;
+  }
+
+  hideSidebar(): void {
+    this.sidebarVisible = false;
+  }
 // reviewers-data.ts
 reviews= [
   {

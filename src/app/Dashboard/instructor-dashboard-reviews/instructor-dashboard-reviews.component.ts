@@ -10,6 +10,18 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-reviews.component.scss'
 })
 export class InstructorDashboardReviewsComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 reviewData = [
   {
     title: 'Automation System',

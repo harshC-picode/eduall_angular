@@ -2,14 +2,24 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DashboardSidebarComponent } from '../../shared/dashboard-sidebar/dashboard-sidebar.component';
+import { AdminNavComponent } from '../../shared/admin-nav/admin-nav.component';
 
 @Component({
   selector: 'app-dashbord-courses',
-  imports: [RouterLink,CommonModule,DashboardSidebarComponent],
+  imports: [RouterLink,CommonModule,DashboardSidebarComponent,AdminNavComponent],
   templateUrl: './dashbord-courses.component.html',
   styleUrl: './dashbord-courses.component.scss'
 })
 export class DashbordCoursesComponent {
+     sidebarVisible = false;
+
+  toggleSidebar(): void {
+    this.sidebarVisible = !this.sidebarVisible;
+  }
+
+  hideSidebar(): void {
+    this.sidebarVisible = false;
+  }
 courses = [
   {
     image: 'assets/images/thumbs/dashbord-courses-img1.png',

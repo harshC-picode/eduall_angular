@@ -9,5 +9,13 @@ import { StudentSidebarComponent } from '../../shared/student-sidebar/student-si
   styleUrl: './student-dashbord-assignment.component.scss'
 })
 export class StudentDashbordAssignmentComponent {
+ sidebarActive = false;
 
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 }

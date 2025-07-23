@@ -10,6 +10,18 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-wishlist.component.scss'
 })
 export class InstructorDashboardWishlistComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 courseList=[
   {
     image: 'assets/images/thumbs/course-img1.png',

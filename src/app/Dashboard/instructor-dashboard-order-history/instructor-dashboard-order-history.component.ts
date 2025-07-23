@@ -10,6 +10,18 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-order-history.component.scss'
 })
 export class InstructorDashboardOrderHistoryComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 transactions = [
   {
     id: '#40922',

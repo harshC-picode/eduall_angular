@@ -10,6 +10,17 @@ import { InstructorSidebarComponent } from '../../shared/instructor-sidebar/inst
   styleUrl: './instructor-dashboard-assignment.component.scss'
 })
 export class InstructorDashboardAssignmentComponent {
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  console.log("clicked...");
+  
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 quizList=[
   {
     "title": "Notating Scales and Piano Keys (Treble)",

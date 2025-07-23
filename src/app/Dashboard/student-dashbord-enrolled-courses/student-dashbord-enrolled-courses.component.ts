@@ -10,6 +10,16 @@ import { StudentSidebarComponent } from '../../shared/student-sidebar/student-si
   styleUrl: './student-dashbord-enrolled-courses.component.scss'
 })
 export class StudentDashbordEnrolledCoursesComponent {
+
+  sidebarActive = false;
+
+toggleSidebar(): void {
+  this.sidebarActive = !this.sidebarActive;
+}
+
+closeSidebar(): void {
+  this.sidebarActive = false;
+}
 courseList = [
   {
     image: 'assets/images/thumbs/dashbord-courses-img5.png',
