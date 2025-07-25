@@ -1,15 +1,51 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Inject, OnDestroy } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Router, NavigationStart } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { PLATFORM_ID } from '@angular/core';
+import { HostListener } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { Select2, Select2Data } from 'ng-select2-component';
+import { CategoryDropdownComponent } from '../../shared/category-dropdown/category-dropdown.component';
 
 @Component({
   selector: 'app-index-4',
-  imports: [RouterLink,CommonModule,SlickCarouselModule],
+  standalone: true,
+  imports: [RouterLink, CommonModule, SlickCarouselModule, Select2, CategoryDropdownComponent],
   templateUrl: './index-4.component.html',
-  styleUrl: './index-4.component.scss'
+  styleUrls: ['./index-4.component.scss'],  // fixed here (plural)
 })
-export class Index4Component {
+export class Index4Component implements OnDestroy {  // add OnDestroy interface
+
+  isActiveProgress = false;
+  private pathLength!: number;
+
+  activeIndex: any | null = null;
+  windowWidth = 0;
+  isBrowser = false;
+
+  selectedCategory = '';
+  searchTerm = '';
+  isHomePageActive = false;
+  categoryDropdownVisible = false;
+  isActive = false;
+
+  isMobileMenuActive = false;
+  activeDropdown: string | null = null;
+
+  private routerSub!: Subscription;
+
+  categories: Select2Data = [
+    { value: '', label: 'Physics' },
+    { value: '1', label: 'Math' },
+    { value: '2', label: 'Biology' },
+    { value: '3', label: 'English' },
+    { value: '4', label: 'Higher Math' },
+    { value: '5', label: 'Social Science' },
+    { value: '6', label: 'Chemistry' }
+  ];
+
   sliderConfig = {
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -62,7 +98,8 @@ export class Index4Component {
       location: 'Phoenix'
     }
   ];
-   reviewSliderConfig = {
+
+  reviewSliderConfig = {
     dots: true,
     arrows: false,
     infinite: true,
@@ -71,7 +108,6 @@ export class Index4Component {
     autoplaySpeed: 4000,
     slidesToShow: 1,
     slidesToScroll: 1,
-   
   };
 
   parentReviews = [
@@ -115,4 +151,64 @@ export class Index4Component {
       comment: "I've taken several courses through, and each one has exceeded my expectations. I've gained valuable skills that have helped me advance in my career. Highly recommend!",
     }
   ];
+
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: any,
+    private router: Router    // add router injection
+  ) {
+    this.isBrowser = isPlatformBrowser(this.platformId);
+
+    if (this.isBrowser) {
+      this.windowWidth = window.innerWidth;
+    }
+
+    this.routerSub = this.router.events.subscribe(event => {
+      if (event instanceof NavigationStart) {
+        this.closeMobileMenu();
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.routerSub) {
+      this.routerSub.unsubscribe();
+    }
+  }
+
+  toggleMobileMenu(): void {
+    this.isMobileMenuActive = !this.isMobileMenuActive;
+
+    if (this.isMobileMenuActive) {
+      document.body.classList.add('scroll-hide-sm');
+    } else {
+      document.body.classList.remove('scroll-hide-sm');
+    }
+  }
+
+  closeMobileMenu(): void {
+    this.isMobileMenuActive = false;
+    document.body.classList.remove('scroll-hide-sm');
+    console.log('closed');
+  }
+
+  // Make sure to add @HostListener for window resize if you want responsive logic
+  @HostListener('window:resize', [])
+  onResize(): void {
+    this.windowWidth = window.innerWidth;
+  }
+
+  toggleSubmenu(index: string) {
+    if (this.windowWidth < 992) {
+      this.activeIndex = this.activeIndex === index ? null : index;
+    }
+  }
+
+  isParentActive(routes: string[]): boolean {
+    const currentUrl = this.router.url;
+    return routes.some(route => route !== '/' ? currentUrl.startsWith(route) : currentUrl === route);
+  }
+
+  toggleDropdown(menu: string): void {
+    this.activeDropdown = this.activeDropdown === menu ? null : menu;
+  }
 }

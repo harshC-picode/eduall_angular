@@ -79,6 +79,11 @@ import { RouterModule, ExtraOptions } from '@angular/router';
 
 export const routes: Routes = [
   {
+        path: 'index-4',
+        component: Index4Component,
+        title: 'index-4'
+      },
+  {
     path: '',
     component: LayoutallComponent,
     children: [
@@ -202,11 +207,11 @@ export const routes: Routes = [
         component: Index3Component,
         title: 'index-3'
       },
-      {
-        path: 'index-4',
-        component: Index4Component,
-        title: 'index-4'
-      },
+      // {
+      //   path: 'index-4',
+      //   component: Index4Component,
+      //   title: 'index-4'
+      // },
       {
         path: 'index-5',
         component: Index5Component,

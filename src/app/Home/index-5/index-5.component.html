@@ -2363,10 +2363,10 @@
 
         <!-- Custom Arrows -->
         <div class="flex-align gap-16 mt-40 justify-content-center">
-            <button id="our-popular-prev" class="btn-arrow">
+            <button id="our-popular-prev" class="slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48">
                 <i class="ph ph-caret-left"></i>
             </button>
-            <button id="our-popular-next" class="btn-arrow">
+            <button id="our-popular-next" class="slick-arrow flex-center rounded-circle border border-gray-100 hover-border-main-600 text-xl hover-bg-main-600 hover-text-white transition-1 w-48 h-48">
                 <i class="ph ph-caret-right"></i>
             </button>
         </div>
@@ -2479,7 +2479,7 @@
 </section>
 
 <!-- ================================ testimonial Section Start ==================================== -->
-<section class="instructor py-120 position-relative z-1">
+<!-- <section class="instructor py-120 position-relative z-1">
 
     <div class="max-w-632-px text-center mx-auto mb-60">
         <div class="text-20 fw-semibold text-main-600 d-flex gap-8 mb-16 justify-content-center" data-aos="fade-down">
@@ -2527,5 +2527,47 @@
 
 
 
-</section>
+</section> -->
 <!-- ================================ testimonial Section End ==================================== -->
+
+
+
+<section class="instructor py-120 position-relative z-1">
+  <div class="max-w-632-px text-center mx-auto mb-60">
+    <div class="text-20 fw-semibold text-main-600 d-flex gap-8 mb-16 justify-content-center" data-aos="fade-down">
+      <span><i class="ph-bold ph-book-open"></i></span>
+      <span>Testimonials</span>
+    </div>
+    <h2 class="text-neutral-700 mb-24 wow bounceIn">What Our Community Says</h2>
+    <p class="text-16 fw-normal wow bounceInUp">Welcome to our testimonial section, where members of our university community share their experiences and insights about life at EduAll.</p>
+  </div>
+
+  <ngx-slick-carousel #slickModal="slick-carousel" class="testimonial-five-slider" [config]="slideConfig">
+
+    <div ngxSlickItem *ngFor="let t of testimonials; let i = index" data-aos="zoom-in" [attr.data-aos-duration]="400 + i*400">
+      <div class="d-flex flex-column justify-content-between align-content-center instructor-item max-w-636-px scale-hover-item bg-white rounded-16 p-12 border border-neutral-30 hover-border-main-600 border px-32 py-32 hover-bg-main-05 transition-04">
+        <ul class="d-flex ailgn gap-8">
+          <li *ngFor="let star of [1,2,3,4]; let idx=index" class="text-20 text-warning-400"><i class="ph-fill ph-star"></i></li>
+          <li class="text-20 text-warning-400">
+            <i class="ph-fill" [ngClass]="t.stars[4] === 0.5 ? 'ph-star-half' : 'ph-star'"></i>
+          </li>
+        </ul>
+        <p class="mb-30">{{ t.text }}</p>
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center gap-20">
+            <img [src]="t.img" alt="">
+            <div>
+              <h6 class="mb-0 mb-8">{{ t.name }}</h6>
+              <span>{{ t.title }}</span>
+            </div>
+          </div>
+          <img src="assets/images/icons/testimonial-five.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </ngx-slick-carousel>
+
+ 
+</section>
+

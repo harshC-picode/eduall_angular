@@ -35,7 +35,7 @@ declare var $: any;
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
-export class HeaderComponent implements OnDestroy { // ✅ Implement OnDestroy
+export class HeaderComponent implements OnDestroy { 
 
   isActiveProgress: boolean = false;
   private pathLength!: number;

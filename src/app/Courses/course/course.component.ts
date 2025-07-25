@@ -10,6 +10,7 @@ import { BreadcrumbComponent } from '../../shared/breadcrumb/breadcrumb.componen
   styleUrl: './course.component.scss'
 })
 export class CourseComponent {
+ 
 
   courses = [
     {
@@ -37,8 +38,8 @@ export class CourseComponent {
       userImage: 'assets/images/thumbs/user-img2.png',
       userName: 'Wade',
       price: '$499',
-      detailsLink: 'course-details.html',
-      enrollLink: 'apply-admission.html'
+      detailsLink: '/course-details',
+      enrollLink: '/apply-admission'
     },
     {
       title: 'Introduction to Photography Masterclass',
@@ -51,8 +52,8 @@ export class CourseComponent {
       userImage: 'assets/images/thumbs/user-img3.png',
       userName: 'Cody',
       price: '$457',
-      detailsLink: 'course-details.html',
-      enrollLink: 'apply-admission.html'
+      detailsLink: '/course-details',
+      enrollLink: '/apply-admission'
     },
     {
       title: 'Spanish Language Mastery: Beginner to Fluent',
@@ -65,8 +66,8 @@ export class CourseComponent {
       userImage: 'assets/images/thumbs/user-img4.png',
       userName: 'Dustin',
       price: '$148',
-      detailsLink: 'course-details.html',
-      enrollLink: 'apply-admission.html'
+      detailsLink: '/course-details',
+      enrollLink: '/apply-admission'
     },
     
   {
@@ -80,8 +81,8 @@ export class CourseComponent {
     userImage: 'assets/images/thumbs/user-img5.png',
     userName: 'Bruce',
     price: '$546',
-    detailsLink: 'course-details.html',
-    enrollLink: 'apply-admission.html'
+    detailsLink: '/course-details',
+    enrollLink: '/apply-admission'
   },
   {
     title: 'Nutrition Essentials for Healthy Living',
@@ -94,8 +95,8 @@ export class CourseComponent {
     userImage: 'assets/images/thumbs/user-img6.png',
     userName: 'Robert',
     price: '$345',
-    detailsLink: 'course-details.html',
-    enrollLink: 'apply-admission.html'
+    detailsLink: '/course-details',
+    enrollLink: '/apply-admission'
   },
   {
     title: 'Nutrition Essentials for Healthy Living',
@@ -108,8 +109,8 @@ export class CourseComponent {
     userImage: 'assets/images/thumbs/user-img2.png',
     userName: 'Robert',
     price: '$345',
-    detailsLink: 'course-details.html',
-    enrollLink: 'apply-admission.html'
+    detailsLink: '/course-details',
+    enrollLink: '/apply-admission'
   },
   {
     title: 'Nutrition Essentials for Healthy Living',
@@ -122,8 +123,8 @@ export class CourseComponent {
     userImage: 'assets/images/thumbs/user-img3.png',
     userName: 'Robert',
     price: '$345',
-    detailsLink: 'course-details.html',
-    enrollLink: 'apply-admission.html'
+    detailsLink: '/course-details',
+    enrollLink: '/apply-admission'
   },
   {
     title: 'Nutrition Essentials for Healthy Living',
@@ -136,8 +137,8 @@ export class CourseComponent {
     userImage: 'assets/images/thumbs/user-img1.png',
     userName: 'Robert',
     price: '$345',
-    detailsLink: 'course-details.html',
-    enrollLink: 'apply-admission.html'
+    detailsLink: '/course-details',
+    enrollLink: '/apply-admission'
   }
 ];
 
