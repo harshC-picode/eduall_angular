@@ -291,18 +291,15 @@
 <!-- ============================== Review Section End =============================== -->
 
     <!-- ========================== Brand Section Start =========================== -->
-<div class="brand wow fadeInUpBig" data-wow-duration="1s" data-wow-delay=".5s">
+<div class="brand wow fadeInUpBig">
     <div class="container container--lg">
-        <div class="brand-box py-80 px-16 ">
+        <div class="brand-box py-80 px-16">
             <h5 class="mb-40 text-center text-neutral-500">TRUSTED BY OVER 17,300 GREAT TEAMS</h5>
-            <div class="container">
-                <div class="brand-slider">
-                    <div class="brand-slider__item px-20" *ngFor="let brand of brandImages">
-                        <img [src]="brand" alt="Brand Image" />
-                    </div>
+            <ngx-slick-carousel class="brand-slider" [config]="brandSlideConfig">
+                <div ngxSlickItem *ngFor="let brand of brandImages" class="brand-slider__item px-20">
+                    <img [src]="brand" alt="Brand Image" />
                 </div>
-
-            </div>
+            </ngx-slick-carousel>
         </div>
     </div>
 </div>

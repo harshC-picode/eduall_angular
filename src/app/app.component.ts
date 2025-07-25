@@ -34,14 +34,31 @@ export class AppComponent implements AfterViewInit {
   }
 
   updateProgress() {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = scrollTop / scrollHeight;
-    const offset = this.pathLength * (1 - progress);
-    this.progressPath.nativeElement.style.strokeDashoffset = offset.toString();
+  if (!this.progressPath?.nativeElement) {
+    // Progress path not yet available, so skip the update
+    return;
   }
 
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const progress = scrollTop / scrollHeight;
+  const offset = this.pathLength * (1 - progress);
+
+  this.progressPath.nativeElement.style.strokeDashoffset = offset.toString();
+}
+
+
+  // updateProgress() {
+  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  //   const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  //   const progress = scrollTop / scrollHeight;
+  //   const offset = this.pathLength * (1 - progress);
+  //   this.progressPath.nativeElement.style.strokeDashoffset = offset.toString();
+  // }
+
   scrollToTop() {
+    console.log("top clicked");
+    
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
   isLoading = true;

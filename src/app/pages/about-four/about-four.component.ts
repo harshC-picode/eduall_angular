@@ -12,7 +12,7 @@ declare var $: any;
   templateUrl: './about-four.component.html',
   styleUrls: ['./about-four.component.scss']
 })
-export class AboutFourComponent  implements AfterViewInit {
+export class AboutFourComponent  {
 
   brandImages: string[] = [
     'assets/images/thumbs/brand-img1.png',
@@ -22,9 +22,9 @@ export class AboutFourComponent  implements AfterViewInit {
     'assets/images/thumbs/brand-img5.png',
     'assets/images/thumbs/brand-img6.png',
     'assets/images/thumbs/brand-img7.png',
-    'assets/images/thumbs/brand-img3.png',
-    'assets/images/thumbs/brand-img4.png',
-    'assets/images/thumbs/brand-img5.png',
+    'assets/images/thumbs/brand-img1.png',
+    'assets/images/thumbs/brand-img2.png',
+    'assets/images/thumbs/brand-img3.png'
   ];
  
   bgImage = 'assets/images/bg/gradient-bg-2.png';
@@ -157,21 +157,17 @@ export class AboutFourComponent  implements AfterViewInit {
     }
   ];
 
-  ngAfterViewInit(): void {
-    setTimeout(() => {
-      $('.brand-slider').slick({
-        slidesToShow: 7,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        arrows: false,
-        dots: false,
-        responsive: [
-          { breakpoint: 992, settings: { slidesToShow: 3 } },
-          { breakpoint: 768, settings: { slidesToShow: 2 } },
-          { breakpoint: 576, settings: { slidesToShow: 1 } }
-        ]
-      });
-    })
-}
+ brandSlideConfig = {
+    slidesToShow: 7,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+    responsive: [
+      { breakpoint: 992, settings: { slidesToShow: 4 } },
+      { breakpoint: 768, settings: { slidesToShow: 2 } },
+      { breakpoint: 576, settings: { slidesToShow: 1 } }
+    ]
+  };
 }
