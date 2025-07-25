@@ -23,8 +23,8 @@ export class CourseComponent {
       userImage: 'assets/images/thumbs/user-img1.png',
       userName: 'AnikaZ',
       price: '$148',
-      detailsLink: 'course-details.html',
-      enrollLink: 'apply-admission.html'
+      detailsLink: '/course-details',
+      enrollLink: '/apply-admission'
     },
     {
       title: 'Introduction to Python Programming',
